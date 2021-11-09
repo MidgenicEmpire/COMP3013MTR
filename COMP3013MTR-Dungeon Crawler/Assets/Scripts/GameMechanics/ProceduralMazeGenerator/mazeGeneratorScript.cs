@@ -7,7 +7,7 @@ public class mazeGeneratorScript : MonoBehaviour
     public MazeScriptableObject mazeToGenerate;
     public colorToObject[] colorToMazeTile;
     public colorToObject[] colorToGameObject;
-    public int overallScaleOffset;
+    public int overallScaleOffset = 1;
 
     [SerializeField] private int spawnArrayIndex; //For testing purposes to display which spawning positions we are using in the MazeObject
 
@@ -25,7 +25,7 @@ public class mazeGeneratorScript : MonoBehaviour
         {
             for (int z = 0; z < mazeToGenerate.mazePixelTexture.height; z++)
             {
-                GenerateMazeTile(x, z);
+                GenerateMazeTile(x*6, z*6);
             }
         }
 
@@ -34,7 +34,8 @@ public class mazeGeneratorScript : MonoBehaviour
         {
             for (int z = 0; z < mazeToGenerate.mazeSpawnArray[spawnArrayIndex].height; z++)
             {
-                GenerateGameObject(x, z);
+                Debug.Log("Generating tile from Pixel " + x + ", " + z);
+                GenerateGameObject(x*6, z*6);
             }
         }
     }
