@@ -78,9 +78,9 @@ public class mazeGeneratorScript : MonoBehaviour
             {
                 colorMapping.Object.transform.localScale = colorMapping.localScale;
 
-                Vector3 pos = new Vector3(overallScaleOffset * (x + colorMapping.offsetX), 
+                Vector3 pos = new Vector3((overallScaleOffset * (x + colorMapping.offsetX))*6, 
                                             colorMapping.Object.transform.position.y,
-                                        overallScaleOffset * (z + colorMapping.offsetZ));
+                                        (overallScaleOffset * (z + colorMapping.offsetZ))*6);
 
                 Instantiate(colorMapping.Object, pos, Quaternion.identity, transform);
             }

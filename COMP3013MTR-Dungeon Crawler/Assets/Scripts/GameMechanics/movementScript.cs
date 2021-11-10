@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class movementScript : MonoBehaviour
 {
+    public float moveSpeed = 11.5f;
+    public float lookSpeed = 2.0f;
     // Start is called before the first frame update
     void Start()
     {
