@@ -25,7 +25,7 @@ public class mazeGeneratorScript : MonoBehaviour
         {
             for (int z = 0; z < mazeToGenerate.mazePixelTexture.height; z++)
             {
-                GenerateMazeTile(x*6, z*6);
+                GenerateMazeTile(x, z);
             }
         }
 
@@ -34,8 +34,7 @@ public class mazeGeneratorScript : MonoBehaviour
         {
             for (int z = 0; z < mazeToGenerate.mazeSpawnArray[spawnArrayIndex].height; z++)
             {
-                Debug.Log("Generating tile from Pixel " + x + ", " + z);
-                GenerateGameObject(x*6, z*6);
+                GenerateGameObject(x, z);
             }
         }
     }
@@ -55,9 +54,9 @@ public class mazeGeneratorScript : MonoBehaviour
             {
                 colorMapping.Object.transform.localScale = colorMapping.localScale;
 
-                Vector3 pos = new Vector3(overallScaleOffset * (x + colorMapping.offsetX), 
+                Vector3 pos = new Vector3((overallScaleOffset * (x + colorMapping.offsetX))*6, 
                                             colorMapping.Object.transform.position.y,
-                                        overallScaleOffset * (z + colorMapping.offsetZ));
+                                        (overallScaleOffset * (z + colorMapping.offsetZ))*6);
 
                 Instantiate(colorMapping.Object, pos, Quaternion.identity, transform);
             }
@@ -73,7 +72,7 @@ public class mazeGeneratorScript : MonoBehaviour
             return; // Skip pixel if it is transparent
         }
 
-        foreach(colorToObject colorMapping in colorToMazeTile)
+        foreach(colorToObject colorMapping in colorToGameObject)
         {
             if(colorMapping.color.Equals(pixelColor))
             {
