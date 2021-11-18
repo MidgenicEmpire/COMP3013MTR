@@ -18,7 +18,7 @@ public class mazeGeneratorScript : MonoBehaviour
         GenerateMaze();
     }
 
-    private void GenerateMaze()
+    public void GenerateMaze()
     {
         //To generate tiles in maze
         for(int x = 0; x < mazeToGenerate.mazePixelTexture.width; x++)
@@ -84,6 +84,13 @@ public class mazeGeneratorScript : MonoBehaviour
 
                 Instantiate(colorMapping.Object, pos, Quaternion.identity, transform);
             }
+        }
+    }
+
+    public void ClearMaze()
+    {
+        foreach (Transform tile in this.transform) {
+            GameObject.Destroy(tile.gameObject);
         }
     }
 }
