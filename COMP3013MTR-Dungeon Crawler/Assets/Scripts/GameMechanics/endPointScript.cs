@@ -12,7 +12,6 @@ public class endPointScript : MonoBehaviour
 
     void OnTriggerEnter(Collider col){
         if(col.gameObject.tag == "Player"){
-            Debug.Log("Level should end");
             levelGenerator.GetComponent<mazeGeneratorScript>().ClearMaze();
             levelGenerator.GetComponent<mazeGeneratorScript>().GenerateMaze();
         }
