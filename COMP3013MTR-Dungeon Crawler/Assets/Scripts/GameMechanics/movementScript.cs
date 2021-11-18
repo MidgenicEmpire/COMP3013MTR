@@ -25,6 +25,7 @@ public class movementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        moveSpeed = 6f;
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
