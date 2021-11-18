@@ -166,7 +166,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447dccf8d3c53048a2a29b16d827ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mazeToGenerate: {fileID: 11400000, guid: 5827f60a004c39b4d983bef6b1000135, type: 2}
+  mazesToGenerate:
+  - {fileID: 11400000, guid: 5827f60a004c39b4d983bef6b1000135, type: 2}
+  - {fileID: 11400000, guid: c91ddcf6879db43478f7009ec9dabee5, type: 2}
+  - {fileID: 11400000, guid: 67af6c37fe521ed48ae7abde22d63f84, type: 2}
+  - {fileID: 11400000, guid: 1c3782c4ba9797c4e879ce5b57b9e32f, type: 2}
+  currentMaze: {fileID: 0}
   colorToMazeTile:
   - color: {r: 0, g: 0, b: 0, a: 1}
     Object: {fileID: 3812348784296855381, guid: 8242a0bfdaaa9014490b57964c3c0075, type: 3}
@@ -267,6 +272,12 @@ MonoBehaviour:
     scaleOffset: 0
   - color: {r: 1, g: 0, b: 0, a: 1}
     Object: {fileID: 5383783145016471824, guid: 1d04f55cdb5269f46a691738a5ed62f4, type: 3}
+    localScale: {x: 1, y: 1, z: 1}
+    offsetX: 0
+    offsetZ: 0
+    scaleOffset: 0
+  - color: {r: 0, g: 0, b: 1, a: 1}
+    Object: {fileID: 8244817305954946714, guid: 5610c2fa4c8264348aa079f3dd5c68a1, type: 3}
     localScale: {x: 1, y: 1, z: 1}
     offsetX: 0
     offsetZ: 0
