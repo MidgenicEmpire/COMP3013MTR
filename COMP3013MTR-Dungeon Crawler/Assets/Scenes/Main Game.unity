@@ -271,6 +271,12 @@ MonoBehaviour:
     offsetX: 0
     offsetZ: 0
     scaleOffset: 0
+  - color: {r: 0, g: 0, b: 1, a: 1}
+    Object: {fileID: 8244817305954946714, guid: 5610c2fa4c8264348aa079f3dd5c68a1, type: 3}
+    localScale: {x: 1, y: 1, z: 1}
+    offsetX: 0
+    offsetZ: 0
+    scaleOffset: 0
   overallScaleOffset: 1
   spawnArrayIndex: 0
 --- !u!1 &394507963

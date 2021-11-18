@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45c306bec7a21d4487aac2ffac7d229, type: 3}
   m_Name: TestMaze
   m_EditorClassIdentifier: 
-  mazePixelTexture: {fileID: 2800000, guid: 1e54da5c177aa864b8e75623952fbfe2, type: 3}
+  mazePixelTexture: {fileID: 2800000, guid: 288acb6be461f3c45b38f18d5e5c5959, type: 3}
   mazeSpawnArray:
   - {fileID: 2800000, guid: b1875eaa57fbecc4e8d81f6328433fda, type: 3}
+  - {fileID: 2800000, guid: 309b74d0b86de9345b74591e1ccd93fa, type: 3}
