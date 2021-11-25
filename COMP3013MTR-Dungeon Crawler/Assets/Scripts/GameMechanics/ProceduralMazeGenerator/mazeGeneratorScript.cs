@@ -15,7 +15,6 @@ public class mazeGeneratorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnArrayIndex = UnityEngine.Random.Range(0, mazeToGenerate.mazeSpawnArray.Length);
         GenerateMaze();
     }
 
