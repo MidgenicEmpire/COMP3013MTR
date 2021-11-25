@@ -14,12 +14,17 @@ public class mazeGeneratorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< Updated upstream
         spawnArrayIndex = UnityEngine.Random.Range(0, mazeToGenerate.mazeSpawnArray.Length);
+=======
+>>>>>>> Stashed changes
         GenerateMaze();
     }
 
     public void GenerateMaze()
     {
+        currentMaze = mazesToGenerate[UnityEngine.Random.Range(0, mazesToGenerate.Length)];
+        spawnArrayIndex = UnityEngine.Random.Range(0, currentMaze.mazeSpawnArray.Length);
         //To generate tiles in maze
         for(int x = 0; x < mazeToGenerate.mazePixelTexture.width; x++)
         {
