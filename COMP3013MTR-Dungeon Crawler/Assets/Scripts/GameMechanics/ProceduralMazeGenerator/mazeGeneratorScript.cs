@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class mazeGeneratorScript : MonoBehaviour
 {
-    public MazeScriptableObject mazeToGenerate;
+    public MazeScriptableObject[] mazesToGenerate;
+    public MazeScriptableObject currentMaze;
     public colorToObject[] colorToMazeTile;
     public colorToObject[] colorToGameObject;
     public int overallScaleOffset = 1;
@@ -14,10 +15,7 @@ public class mazeGeneratorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< Updated upstream
         spawnArrayIndex = UnityEngine.Random.Range(0, mazeToGenerate.mazeSpawnArray.Length);
-=======
->>>>>>> Stashed changes
         GenerateMaze();
     }
 
@@ -26,18 +24,18 @@ public class mazeGeneratorScript : MonoBehaviour
         currentMaze = mazesToGenerate[UnityEngine.Random.Range(0, mazesToGenerate.Length)];
         spawnArrayIndex = UnityEngine.Random.Range(0, currentMaze.mazeSpawnArray.Length);
         //To generate tiles in maze
-        for(int x = 0; x < mazeToGenerate.mazePixelTexture.width; x++)
+        for(int x = 0; x < currentMaze.mazePixelTexture.width; x++)
         {
-            for (int z = 0; z < mazeToGenerate.mazePixelTexture.height; z++)
+            for (int z = 0; z < currentMaze.mazePixelTexture.height; z++)
             {
                 GenerateMazeTile(x, z);
             }
         }
 
         //To generate objects in maze
-        for(int x = 0; x < mazeToGenerate.mazeSpawnArray[spawnArrayIndex].width; x++)
+        for(int x = 0; x < currentMaze.mazeSpawnArray[spawnArrayIndex].width; x++)
         {
-            for (int z = 0; z < mazeToGenerate.mazeSpawnArray[spawnArrayIndex].height; z++)
+            for (int z = 0; z < currentMaze.mazeSpawnArray[spawnArrayIndex].height; z++)
             {
                 GenerateGameObject(x, z);
             }
@@ -46,7 +44,7 @@ public class mazeGeneratorScript : MonoBehaviour
 
     private void GenerateMazeTile(int x, int z)
     {
-        Color pixelColor = mazeToGenerate.mazePixelTexture.GetPixel(x, z); //Get color of pixel within texture
+        Color pixelColor = currentMaze.mazePixelTexture.GetPixel(x, z); //Get color of pixel within texture
 
         if (pixelColor.a == 0)
         {
@@ -70,7 +68,7 @@ public class mazeGeneratorScript : MonoBehaviour
 
     private void GenerateGameObject(int x, int z)
     {
-        Color pixelColor = mazeToGenerate.mazeSpawnArray[spawnArrayIndex].GetPixel(x, z); //Get color of pixel within texture
+        Color pixelColor = currentMaze.mazeSpawnArray[spawnArrayIndex].GetPixel(x, z); //Get color of pixel within texture
 
         if (pixelColor.a == 0)
         {
