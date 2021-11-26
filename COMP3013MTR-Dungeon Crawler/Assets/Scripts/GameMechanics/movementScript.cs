@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class movementScript : MonoBehaviour
 {
-    public float moveSpeed;
+    public float walkSpeed;
+    public float runSpeed;
     CharacterController charController;
     Vector3 moveDir = Vector3.zero;
     float rotationX = 0;
@@ -12,6 +13,10 @@ public class movementScript : MonoBehaviour
     public Camera playerCam;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
+    public bool sprintActive = false;
+
+    [HideInInspector]
+    public bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -25,18 +30,48 @@ public class movementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveSpeed = 6f;
+        walkSpeed = 5f;
+        runSpeed = 8f;
+        
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
-        moveDir = (forward * Input.GetAxis("Vertical")  + right * Input.GetAxis("Horizontal"));
-    
-        rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-        rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+        if(Input.GetButtonDown("Sprint"))
+        {
+            SprintHold();
+        }
 
-        playerCam.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+        else if(Input.GetButtonUp("Sprint"))
+        {
+            SprintRelease();
+        }
 
-        charController.Move((moveDir * moveSpeed) * Time.deltaTime);
+        float speedX = canMove ? (sprintActive ? runSpeed : walkSpeed) * Input.GetAxis("Vertical"):0;
+        float speedY = canMove ? (sprintActive ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal"):0;
+
+        moveDir = (forward * speedX) + (right * speedY);
+
+        charController.Move(moveDir * Time.deltaTime);
+        
+
+        if(canMove)
+        {
+            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+            playerCam.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+        }
+    }
+
+    void SprintHold()
+    {
+        sprintActive = true;
+        Debug.Log(Input.GetButtonDown("Sprint"));
+    }
+
+    void SprintRelease()
+    {
+        sprintActive = false;
+        Debug.Log(Input.GetButtonDown("Sprint"));
     }
 }
