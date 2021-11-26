@@ -66,12 +66,10 @@ public class movementScript : MonoBehaviour
     void SprintHold()
     {
         sprintActive = true;
-        Debug.Log(Input.GetButtonDown("Sprint"));
     }
 
     void SprintRelease()
     {
         sprintActive = false;
-        Debug.Log(Input.GetButtonDown("Sprint"));
     }
 }
