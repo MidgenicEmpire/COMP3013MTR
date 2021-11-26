@@ -5,7 +5,7 @@ using UnityEngine;
 public class movementScript : MonoBehaviour
 {
     public float moveSpeed;
-    CharacterController charController;
+    public CharacterController charController;
     Vector3 moveDir = Vector3.zero;
     float rotationX = 0;
     [Header("Camera")]
@@ -38,5 +38,9 @@ public class movementScript : MonoBehaviour
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
 
         charController.Move((moveDir * moveSpeed) * Time.deltaTime);
+
+       
+
+
     }
 }

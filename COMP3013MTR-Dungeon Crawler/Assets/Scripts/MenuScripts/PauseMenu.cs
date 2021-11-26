@@ -34,6 +34,7 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        //This sets where the cursor interacts
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
