@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class PlayerHealth :MonoBehaviour
+public class PlayerHealth
 {
     public event EventHandler OnHealthChanged;
     private int health;
@@ -27,6 +27,7 @@ public float GetHealthPercent()
     }
 
 
+    //This ensures that if the player has 0 HP damage will still continue
 public void TakeDamage( int damageAmount)
     {
         health -= damageAmount;
@@ -43,13 +44,6 @@ public void Heal (int healAmount)
 
 
     //This is to test the healthBar
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20); 
-        }
-    }
-
+   
 
 }
