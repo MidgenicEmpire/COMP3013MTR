@@ -17,10 +17,13 @@ public class movementScript : MonoBehaviour
 
     [HideInInspector]
     public bool canMove = true;
+    public Canvas mapCam;
+    public GameObject sword;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         charController = GetComponent<CharacterController>();
         //Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
@@ -60,6 +63,23 @@ public class movementScript : MonoBehaviour
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCam.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if(mapCam.enabled == false)
+            {
+                 mapCam.enabled = true;
+                lookXLimit = 60.0f;
+                sword.SetActive(false);
+
+            } else
+            {
+                mapCam.enabled = false;
+                lookXLimit = 45.0f;
+                sword.SetActive(true);
+            }
+           
         }
     }
 
