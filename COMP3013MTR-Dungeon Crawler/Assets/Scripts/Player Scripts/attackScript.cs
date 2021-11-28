@@ -15,15 +15,16 @@ public class attackScript : MonoBehaviour
     void Update()
     {
         if(Input.GetButtonDown("Attack")){
-            StartCoroutine(Attack(1f));
+            StartCoroutine(Attack(1.60f));
         }
     }
 
     IEnumerator Attack(float attackTime)
     {
-        sword.GetComponent<Collider>().enabled = true;
         swordAnimController.SetTrigger("isAttacking");
         yield return new WaitForSeconds(attackTime);
+        sword.GetComponent<Collider>().enabled = true;
+        yield return new WaitForSeconds(0.15f);
         sword.GetComponent<Collider>().enabled = false;
     }
 }

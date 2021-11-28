@@ -13,16 +13,42 @@ public class HitboxScript : MonoBehaviour
 
     // Update is called once per frame
     void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "Sword" && alreadyHit == false){
-            alreadyHit = true;
-            if(this.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Sword"){
+            Debug.Log("Sword detected!");
+            StartCoroutine(dealDamage(0.30f, this.gameObject));
+        }
+    }
+
+    IEnumerator dealDamage(float time, GameObject obj)
+    {
+        while(true)
+        {
+            if(obj.tag == "Enemy")
             {
-                this.gameObject.GetComponent<PlayerHealth>().TakeDamage(25);
+                Debug.Log("Enemy hit");
+                if(!alreadyHit)
+                {
+                    this.gameObject.GetComponent<EnemyHealth>().TakeDamage(25);
+                    alreadyHit = true;
+                    Debug.Log(this.gameObject.GetComponent<EnemyHealth>().currHP);
+                }
+                
+                yield return new WaitForSeconds(time);
+                alreadyHit = false;
+                yield break;
             }
 
-            else if(this.gameObject.tag == "Enemy")
+            else if(obj.tag == "Player")
             {
-                this.gameObject.GetComponent<EnemyHealth>().TakeDamage(25);
+                Debug.Log("Player hit");
+                if(!alreadyHit)
+                {
+                    this.gameObject.GetComponent<PlayerHealth>().TakeDamage(25);
+                    alreadyHit = true;
+                }
+                yield return new WaitForSeconds(time);
+                alreadyHit = false;
+                yield break;
             }
         }
     }

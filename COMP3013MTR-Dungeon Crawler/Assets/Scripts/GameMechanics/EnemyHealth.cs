@@ -17,7 +17,7 @@ public class EnemyHealth : MonoBehaviour
     {
         currHP -= healthToRemove;
 
-        if(currHP >= 0)
+        if(currHP <= 0)
         {
             Destroy(this.gameObject);
         }
