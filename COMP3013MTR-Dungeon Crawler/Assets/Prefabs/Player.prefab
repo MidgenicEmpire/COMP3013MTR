@@ -307,6 +307,8 @@ MonoBehaviour:
   playerCam: {fileID: 6270893021168399836}
   lookSpeed: 2
   lookXLimit: 60
+  mapCam: {fileID: 3548889618551371577}
+  sword: {fileID: 5382712788485852478}
 --- !u!143 &7533939189481017675
 CharacterController:
   m_ObjectHideFlags: 0
