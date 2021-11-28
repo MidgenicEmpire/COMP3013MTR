@@ -72,3 +72,8 @@ crashlytics-build.properties
 COMP3013MTR-Dungeon Crawler/Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset
 COMP3013MTR-Dungeon Crawler/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
 COMP3013MTR-Dungeon Crawler/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+COMP3013MTR-Dungeon Crawler/Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset
+*.cache
+*.cache
+*.meta
+*.meta
