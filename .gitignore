@@ -69,3 +69,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+COMP3013MTR-Dungeon Crawler/Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset
+COMP3013MTR-Dungeon Crawler/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+COMP3013MTR-Dungeon Crawler/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+COMP3013MTR-Dungeon Crawler/Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset
+*.cache

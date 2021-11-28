@@ -13,6 +13,7 @@ public class endPointScript : MonoBehaviour
     void OnTriggerEnter(Collider col){
         if(col.gameObject.tag == "Player"){
             levelGenerator.GetComponent<mazeGeneratorScript>().ClearMaze();
+            levelGenerator.GetComponent<mazeGeneratorScript>().currentMaze = levelGenerator.GetComponent<mazeGeneratorScript>().mazesToGenerate[UnityEngine.Random.Range(0, levelGenerator.GetComponent<mazeGeneratorScript>().mazesToGenerate.Length)];
             levelGenerator.GetComponent<mazeGeneratorScript>().GenerateMaze();
         }
     }
