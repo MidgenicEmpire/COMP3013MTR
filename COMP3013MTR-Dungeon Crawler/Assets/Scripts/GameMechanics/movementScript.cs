@@ -46,11 +46,12 @@ public class movementScript : MonoBehaviour
         {
             if(mapCam.enabled == false)
             {
-                 mapCam.enabled = true;
+                mapCam.enabled = true;
                 lookXLimit = 60.0f;
                 sword.SetActive(false);
 
-            } else
+            } 
+            else
             {
                 mapCam.enabled = false;
                 lookXLimit = 45.0f;
@@ -58,7 +59,6 @@ public class movementScript : MonoBehaviour
             }
            
         }
-
 
 }
 
