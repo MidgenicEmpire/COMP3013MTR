@@ -5,13 +5,15 @@ using UnityEngine;
 public class HitboxScript : MonoBehaviour
 {
     public bool alreadyHit;
+
+
     // Start is called before the first frame update
     void Start()
     {
         alreadyHit = false;
     }
 
-    // Update is called once per frame
+    //This gets the collider from the player sword 
     void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Sword"){
             Debug.Log("Sword detected!");
@@ -42,7 +44,8 @@ public class HitboxScript : MonoBehaviour
             {
                 Debug.Log("Player hit");
                 if(!alreadyHit)
-                {
+                {                   
+                    yield return new WaitForSeconds(time);
                     this.gameObject.GetComponent<PlayerHealth>().TakeDamage(25);
                     alreadyHit = true;
                 }
