@@ -17,7 +17,7 @@ public class movementScript : MonoBehaviour
 
     [HideInInspector]
     public bool canMove = true;
-    public Canvas mapCam;
+    public GameObject mapCam;
     public GameObject sword;
 
     // Start is called before the first frame update
@@ -67,15 +67,15 @@ public class movementScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.M))
         {
-            if(mapCam.enabled == false)
+            if(mapCam.activeSelf == false)
             {
-                 mapCam.enabled = true;
+                mapCam.SetActive(true);
                 lookXLimit = 60.0f;
                 sword.SetActive(false);
 
             } else
             {
-                mapCam.enabled = false;
+                mapCam.SetActive(false);
                 lookXLimit = 45.0f;
                 sword.SetActive(true);
             }
