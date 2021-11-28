@@ -22,12 +22,17 @@ public class EnemyAI : MonoBehaviour
     bool isAlert;
 
     //Enemy Attack
-    public float attackRate;
+    public float attackRate = 0.1f;
     bool hasAttacked;
 
     //States
     public float sightRange, attackRange;
     public bool playerInRange, playerInAttackRange;
+
+
+    //instatiates a Hitbox Script
+    HitboxScript hitScript;
+    PlayerHealth playerDmg;
 
     private void Awake()
     {
@@ -133,10 +138,9 @@ public class EnemyAI : MonoBehaviour
         if (!hasAttacked)
         {
 
-            //Attack code will be here we need to add the animation to the attack as well
-            enemyAnimator.SetBool("isAttack", true);
-
-
+            //Test attack code
+            enemyAnimator.SetBool("isAttack", true);           
+            this.gameObject.GetComponent<PlayerHealth>().TakeDamage(25);       
 
             hasAttacked = true;
             //acts as a deley

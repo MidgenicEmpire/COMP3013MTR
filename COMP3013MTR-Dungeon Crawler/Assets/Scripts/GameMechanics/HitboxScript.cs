@@ -18,8 +18,15 @@ public class HitboxScript : MonoBehaviour
         if(other.gameObject.tag == "Sword"){
             Debug.Log("Sword detected!");
             StartCoroutine(dealDamage(0.30f, this.gameObject));
+
+        } else if(other.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Enemy detected!");
+            StartCoroutine(dealDamage(0.1f, this.gameObject));
         }
     }
+
+
 
     IEnumerator dealDamage(float time, GameObject obj)
     {
