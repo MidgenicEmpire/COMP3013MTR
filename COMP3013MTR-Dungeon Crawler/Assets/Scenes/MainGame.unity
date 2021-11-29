@@ -167,6 +167,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazesToGenerate:
+  - {fileID: 11400000, guid: 5827f60a004c39b4d983bef6b1000135, type: 2}
+  - {fileID: 11400000, guid: c91ddcf6879db43478f7009ec9dabee5, type: 2}
+  - {fileID: 11400000, guid: 67af6c37fe521ed48ae7abde22d63f84, type: 2}
+  - {fileID: 11400000, guid: 1c3782c4ba9797c4e879ce5b57b9e32f, type: 2}
+  - {fileID: 11400000, guid: 854df7e43ab66204f97fa2bb72e38c72, type: 2}
   - {fileID: 11400000, guid: 96a63cab52601324da5ed5307250077c, type: 2}
   currentMaze: {fileID: 0}
   colorToMazeTile:

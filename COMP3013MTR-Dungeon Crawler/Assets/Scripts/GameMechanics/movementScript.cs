@@ -52,8 +52,8 @@ public class movementScript : MonoBehaviour
         float speedX = canMove ? (sprintActive ? runSpeed : walkSpeed) * Input.GetAxis("Vertical"):0;
         float speedY = canMove ? (sprintActive ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal"):0;
 
+        moveDir.Normalize();
         moveDir = (forward * speedX) + (right * speedY);
-
         charController.Move(moveDir * Time.deltaTime);
         
 
