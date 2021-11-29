@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazePixelTexture: {fileID: 2800000, guid: 4fb3ca10b07734f4a8575bd21cfe49d0, type: 3}
   mazeSpawnArray:
-  - {fileID: 2800000, guid: 309b74d0b86de9345b74591e1ccd93fa, type: 3}
+  - {fileID: 2800000, guid: 2166565a517eb8e4dbe838fa1c3760a8, type: 3}
