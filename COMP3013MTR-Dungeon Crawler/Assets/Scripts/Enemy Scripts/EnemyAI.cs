@@ -9,9 +9,14 @@ public class EnemyAI : MonoBehaviour
 
     public Transform player;
 
+    public float lookRadius = 10f;
+
     public LayerMask isGround, isPlayer;
 
     Animator enemyAnimator;
+
+    //Holds the distance between the object and the player
+    float distance;
 
     //Patroling
     public Vector3 walkPoint;
@@ -41,24 +46,33 @@ public class EnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
+    void getLocation()
+    {
+        distance = Vector3.Distance(player.position, transform.position);
+    }
 
-    //Updates each 
+
+    //Updates each frame
     private void Update()
     {
+        
+
         //Checks to see if the player is within sight of the enemy
         playerInRange = Physics.CheckSphere(transform.position, sightRange, isPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, isPlayer);
 
+         //chasePlayer();
 
-        if(!playerInRange && !playerInAttackRange)
+
+        if (!playerInRange && !playerInAttackRange)
         {
+            Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm searching for a tthing");
             //Idle();
             //Patroling();
         }
         if(playerInRange && !playerInAttackRange)
         {
             Alert();
-            chasePlayer();
         }
         if(playerInRange && playerInAttackRange)
         {
@@ -122,10 +136,30 @@ public class EnemyAI : MonoBehaviour
     private void chasePlayer()
     {
         //gets the position of the player and makes it a walk point
-        agent.SetDestination(player.position);
-        enemyAnimator.SetBool("isWalk", true);
+        //agent.SetDestination(player.position);
+
+        if (distance <= lookRadius)
+        {
+            enemyAnimator.SetBool("isWalk", true);      
+            agent.SetDestination(player.position);
+
+            if (distance <= agent.stoppingDistance)
+            {
+                targetFace();
+                Debug.Log("detecting player");
+            }
+        }
 
     }
+
+    void targetFace()
+    {
+        Vector3 direction = (player.position - transform.position).normalized;
+        Quaternion look = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, look, Time.deltaTime * 5f);
+    }
+
 
     private void attackPlayer()
     {
@@ -148,6 +182,8 @@ public class EnemyAI : MonoBehaviour
         }
 
     }
+
+
 
     private void ResetAttack()
     {
