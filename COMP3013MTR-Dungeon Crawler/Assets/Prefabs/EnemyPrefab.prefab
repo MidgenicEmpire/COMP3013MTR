@@ -154,9 +154,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   walkPoint: {x: 0, y: 0, z: 0}
-  walkRange: 0
-  attackRate: 0.1
-  sightRange: 0
-  attackRange: 0
+  walkRange: 30
+  attackRate: 0.5
+  sightRange: 10
+  attackRange: 1.5
   playerInRange: 0
   playerInAttackRange: 0

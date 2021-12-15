@@ -36,8 +36,8 @@ public class EnemyAI : MonoBehaviour
 
 
     //instatiates a Hitbox Script
-    HitboxScript hitScript;
-    PlayerHealth playerDmg;
+    //HitboxScript hitScript;
+    //PlayerHealth playerDmg;
 
     private void Awake()
     {
@@ -66,17 +66,19 @@ public class EnemyAI : MonoBehaviour
 
         if (!playerInRange && !playerInAttackRange)
         {
-            Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm searching for a tthing");
+
             //Idle();
-            //Patroling();
+            Patroling();
         }
         if(playerInRange && !playerInAttackRange)
         {
+            Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm seeing a thinggsdf");
             Alert();
         }
         if(playerInRange && playerInAttackRange)
         {
-            attackPlayer();
+            Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm attacking a thinggsdf");
+            //attackPlayer();
         }
     }
     //Enemy Alert
@@ -112,8 +114,6 @@ public class EnemyAI : MonoBehaviour
             hasWalkPoint = false;
         }
 
-
-
     }
     private void SearchWalkPoint()
     {
@@ -136,19 +136,22 @@ public class EnemyAI : MonoBehaviour
     private void chasePlayer()
     {
         //gets the position of the player and makes it a walk point
-        //agent.SetDestination(player.position);
+        agent.SetDestination(player.position);
 
-        if (distance <= lookRadius)
-        {
-            enemyAnimator.SetBool("isWalk", true);      
-            agent.SetDestination(player.position);
+        agent.speed = 3.5f;
+        enemyAnimator.SetBool("isWalk", true);
 
-            if (distance <= agent.stoppingDistance)
-            {
-                targetFace();
-                Debug.Log("detecting player");
-            }
-        }
+        //if (distance <= lookRadius)
+        //{
+        //    enemyAnimator.SetBool("isWalk", true);      
+        //    agent.SetDestination(player.position);
+
+        //    if (distance <= agent.stoppingDistance)
+        //    {
+        //        targetFace();
+        //        Debug.Log("detecting player");
+        //    }
+        //}
 
     }
 
