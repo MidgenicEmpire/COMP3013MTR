@@ -105,6 +105,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 680e7eadf2226ea4881148c1fc1e8ae7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
+--- !u!1 &8540046446641280246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
+  m_PrefabInstance: {fileID: 8810517716670532007}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &360127329124779941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9131702227135254018, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
@@ -124,3 +129,52 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!195 &869783698952322109
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8540046446641280246}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 10
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &4136880737383356893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8540046446641280246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1cdb0efc02342a479ac55172665d7c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 869783698952322109}
+  player: {fileID: 2671863534783304384, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
+  isGround:
+    serializedVersion: 2
+    m_Bits: 8
+  isPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkRange: 0
+  attackRate: 0.1
+  sightRange: 0
+  attackRange: 0
+  playerInRange: 0
+  playerInAttackRange: 0
