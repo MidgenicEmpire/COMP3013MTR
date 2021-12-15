@@ -96,13 +96,17 @@ public class EnemyAI : MonoBehaviour
     //Enemy patroling script
     private void Patroling()
     {
+        Debug.Log("I'm walkin ere");
+
+        enemyAnimator.SetBool("isWalk", true);
+
         if (!hasWalkPoint)
         {
             SearchWalkPoint();
         }
         if (hasWalkPoint)
         {
-            enemyAnimator.SetBool("isWalk", true);
+            //enemyAnimator.SetBool("isWalk", true);
             agent.SetDestination(walkPoint);
         }
 
