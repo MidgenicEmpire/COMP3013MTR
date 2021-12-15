@@ -3,22 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
-    public int maxHP;
-    public int currHP;
+    public float maxHP;
+    public float currHP;
 
-    public EnemyHealth(int max)
-    {
-        this.maxHP = max;
+    void Update() {
+        maxHP = this.gameObject.GetComponentInParent<mazeGeneratorScript>().newMaxHP;
+
+        if(currHP > maxHP){
+            currHP = maxHP;
+        }
+    }
+
+    void LateUpdate() {
         currHP = maxHP;
     }
 
-    // Update is called once per frame
-    public void TakeDamage(int healthToRemove)
-    {
+    public void TakeDamage(float healthToRemove){
         currHP -= healthToRemove;
 
-        if(currHP <= 0)
-        {
+        if(currHP <= 0){
             Destroy(this.gameObject);
         }
     }
