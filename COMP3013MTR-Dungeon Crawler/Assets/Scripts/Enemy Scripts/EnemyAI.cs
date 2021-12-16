@@ -44,6 +44,7 @@ public class EnemyAI : MonoBehaviour
         enemyAnimator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        //playerDmg = GetComponent<PlayerHealth>();
     }
 
     void getLocation()
@@ -67,18 +68,22 @@ public class EnemyAI : MonoBehaviour
         if (!playerInRange && !playerInAttackRange)
         {
 
-            //Idle();
-            Patroling();
+            Idle();
+            //Patroling could is going to be a stretch goal. 
+            //to make patroling work, we need to figure out how to 
+            //Patroling();
         }
         if(playerInRange && !playerInAttackRange)
         {
-            Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm seeing a thinggsdf");
+            //Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm seeing a thinggsdf");
             Alert();
+            chasePlayer();
+            enemyAnimator.SetBool("isAttack", false);
         }
         if(playerInRange && playerInAttackRange)
         {
-            Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm attacking a thinggsdf");
-            //attackPlayer();
+            //Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm attacking a thinggsdf");
+            attackPlayer();
         }
     }
     //Enemy Alert
@@ -88,52 +93,53 @@ public class EnemyAI : MonoBehaviour
         enemyAnimator.SetBool("isAlert", true);
     }
 
-    //private void Idle()
-    //{
-    //    enemyAnimator.SetBool("isIdle", true);
-    //}
+    private void Idle()
+    {
+        enemyAnimator.SetBool("isIdle", true);
+    }
 
+    //-------------------------------------------STRETCH GOAL-----------------------------------//
     //Enemy patroling script
-    private void Patroling()
-    {
-        Debug.Log("I'm walkin ere");
+    //private void Patroling()
+    //{
+    //    Debug.Log("I'm walkin ere");
 
-        enemyAnimator.SetBool("isWalk", true);
+    //    enemyAnimator.SetBool("isWalk", true);
 
-        if (!hasWalkPoint)
-        {
-            SearchWalkPoint();
-        }
-        if (hasWalkPoint)
-        {
-            //enemyAnimator.SetBool("isWalk", true);
-            agent.SetDestination(walkPoint);
-        }
+    //    if (!hasWalkPoint)
+    //    {
+    //        SearchWalkPoint();
+    //    }
+    //    if (hasWalkPoint)
+    //    {
+    //        //enemyAnimator.SetBool("isWalk", true);
+    //        agent.SetDestination(walkPoint);
+    //    }
 
-        Vector3 distanceToPoint = transform.position - walkPoint;
+    //    Vector3 distanceToPoint = transform.position - walkPoint;
 
-        //If the enemy reaches the walk point
-        if(distanceToPoint.magnitude < 1f)
-        {
-            hasWalkPoint = false;
-        }
+    //    //If the enemy reaches the walk point
+    //    if(distanceToPoint.magnitude < 1f)
+    //    {
+    //        hasWalkPoint = false;
+    //    }
 
-    }
-    private void SearchWalkPoint()
-    {
-        //Calculates a random point in range
-        float randomZPoint = Random.Range(-walkRange, walkRange);
-        float randomXPoint = Random.Range(-walkRange, walkRange);
+    //}
+    //private void SearchWalkPoint()
+    //{
+    //    //Calculates a random point in range
+    //    float randomZPoint = Random.Range(-walkRange, walkRange);
+    //    float randomXPoint = Random.Range(-walkRange, walkRange);
 
-        walkPoint = new Vector3(transform.position.x + randomXPoint, 
-            transform.position.y, transform.position.z + randomZPoint);
+    //    walkPoint = new Vector3(transform.position.x + randomXPoint,
+    //        transform.position.y, transform.position.z + randomZPoint);
 
-        //Checks to see if the point is on the ground
-        if(Physics.Raycast(walkPoint, -transform.up, 2f, isGround))
-        {
-            hasWalkPoint = true;
-        }
-    }
+    //    //Checks to see if the point is on the ground
+    //    if (Physics.Raycast(walkPoint, -transform.up, 2f, isGround))
+    //    {
+    //        hasWalkPoint = true;
+    //    }
+    //}
 
 
 
@@ -147,7 +153,7 @@ public class EnemyAI : MonoBehaviour
 
         //if (distance <= lookRadius)
         //{
-        //    enemyAnimator.SetBool("isWalk", true);      
+        //    enemyAnimator.SetBool("isWalk", true);
         //    agent.SetDestination(player.position);
 
         //    if (distance <= agent.stoppingDistance)
@@ -156,6 +162,7 @@ public class EnemyAI : MonoBehaviour
         //        Debug.Log("detecting player");
         //    }
         //}
+
 
     }
 
@@ -180,8 +187,11 @@ public class EnemyAI : MonoBehaviour
         {
 
             //Test attack code
-            enemyAnimator.SetBool("isAttack", true);           
-            this.gameObject.GetComponent<PlayerHealth>().TakeDamage(25);       
+            enemyAnimator.SetBool("isWalk", false);
+            enemyAnimator.SetBool("isAttack", true);
+
+            //this.gameObject.GetComponent<PlayerHealth>().TakeDamage(25);
+            Debug.Log("You are taking damage");
 
             hasAttacked = true;
             //acts as a deley
@@ -195,5 +205,7 @@ public class EnemyAI : MonoBehaviour
     private void ResetAttack()
     {
         hasAttacked = false;
+        Debug.Log("Resetting attack");
+        
     }
 }
