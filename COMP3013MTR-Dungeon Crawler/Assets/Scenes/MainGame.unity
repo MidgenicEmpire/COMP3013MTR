@@ -273,7 +273,7 @@ MonoBehaviour:
     offsetZ: 0
     scaleOffset: 0
   - color: {r: 1, g: 0, b: 0, a: 1}
-    Object: {fileID: 8540046446641280246, guid: d27545cc0d4de9640ac291f00f927e6d, type: 3}
+    Object: {fileID: 8540046446641280246, guid: 1d04f55cdb5269f46a691738a5ed62f4, type: 3}
     localScale: {x: 100, y: 100, z: 100}
     offsetX: 0
     offsetZ: 0
@@ -285,6 +285,7 @@ MonoBehaviour:
     offsetZ: 0
     scaleOffset: 0
   overallScaleOffset: 1
+  newMaxHP: 0
   spawnArrayIndex: 0
 --- !u!1 &391812802
 GameObject:
@@ -1623,6 +1624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0c2db5c8bf02f468551dc0844b5763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mazesPassed: 0
   pfHealthBar: {fileID: 5334774339524646102, guid: 96f138b72b929c74d9cf6ae58e79eecb, type: 3}
 --- !u!4 &1968336955
 Transform:
