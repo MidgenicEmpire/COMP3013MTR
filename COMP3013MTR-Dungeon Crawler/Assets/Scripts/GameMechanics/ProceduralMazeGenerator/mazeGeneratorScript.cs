@@ -19,11 +19,6 @@ public class mazeGeneratorScript : MonoBehaviour
         GenerateMaze();
     }
 
-    void Update() 
-    {
-        newMaxHP = 100.0f + (GameObject.Find("SceneManager").GetComponent<GameManager>().mazesPassed * 10);
-    }
-
     public void GenerateMaze()
     {
         currentMaze = mazesToGenerate[UnityEngine.Random.Range(0, mazesToGenerate.Length)];

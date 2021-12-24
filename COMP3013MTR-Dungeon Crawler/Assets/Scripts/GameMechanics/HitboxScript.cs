@@ -15,7 +15,7 @@ public class HitboxScript : MonoBehaviour
     void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Sword"){
             Debug.Log("Sword detected!");
-            StartCoroutine(dealDamage(0.30f, this.gameObject));
+            StartCoroutine(dealDamage(0.30f, this.transform.parent.gameObject));
         }
     }
 
@@ -28,9 +28,9 @@ public class HitboxScript : MonoBehaviour
                 Debug.Log("Enemy hit");
                 if(!alreadyHit)
                 {
-                    this.gameObject.GetComponent<EnemyHealth>().TakeDamage(25);
+                    obj.GetComponent<EnemyHealth>().TakeDamage(25);
                     alreadyHit = true;
-                    Debug.Log(this.gameObject.GetComponent<EnemyHealth>().currHP);
+                    Debug.Log(obj.GetComponent<EnemyHealth>().currHP);
                 }
                 
                 yield return new WaitForSeconds(time);
@@ -43,7 +43,7 @@ public class HitboxScript : MonoBehaviour
                 Debug.Log("Player hit");
                 if(!alreadyHit)
                 {
-                    this.gameObject.GetComponent<PlayerHealth>().TakeDamage(25);
+                    obj.GetComponent<PlayerHealth>().TakeDamage(25);
                     alreadyHit = true;
                 }
                 yield return new WaitForSeconds(time);

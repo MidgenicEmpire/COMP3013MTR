@@ -5,17 +5,15 @@ public class EnemyHealth : MonoBehaviour
 {
     public float maxHP;
     public float currHP;
+    void Start(){
+        maxHP = 100 + (GameObject.Find("SceneManager").GetComponent<GameManager>().mazesPassed * 10);
+        currHP = maxHP;
+    }
 
     void Update() {
-        maxHP = this.gameObject.GetComponentInParent<mazeGeneratorScript>().newMaxHP;
-
         if(currHP > maxHP){
             currHP = maxHP;
         }
-    }
-
-    void LateUpdate() {
-        currHP = maxHP;
     }
 
     public void TakeDamage(float healthToRemove){
