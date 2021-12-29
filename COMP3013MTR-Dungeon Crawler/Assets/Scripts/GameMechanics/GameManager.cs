@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int mazesPassed;
+
     public Transform pfHealthBar;
 
     private void Start()
