@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 2671863534783304397}
   - component: {fileID: 585634026174402855}
   - component: {fileID: 7533939189481017675}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5295005798960263327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9211064d442e364e8cfabfe76a2d0de, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d649d083aa91124ead2f593884ffdf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   compassImage: {fileID: 4464336174208918808}
