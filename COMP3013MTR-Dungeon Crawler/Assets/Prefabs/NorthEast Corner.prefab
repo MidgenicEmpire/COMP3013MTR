@@ -166,11 +166,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
+--- !u!1 &1753308094274293682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 189982, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
+  m_PrefabInstance: {fileID: 1753308094274447788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1753308094274561868 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446176, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
   m_PrefabInstance: {fileID: 1753308094274447788}
   m_PrefabAsset: {fileID: 0}
+--- !u!208 &4694764411221958840
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753308094274293682}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.5890002, y: 2.5640001, z: 0.215}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.4720001, y: 2.522, z: 0.058000002}
+  m_TimeToStationary: 0.5
 --- !u!1001 &2274584339258252867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -378,8 +399,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
+--- !u!1 &4845851816682274850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 189982, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
+  m_PrefabInstance: {fileID: 4845851816682169916}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4845851816682023132 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446176, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
   m_PrefabInstance: {fileID: 4845851816682169916}
   m_PrefabAsset: {fileID: 0}
+--- !u!208 &351185941064761656
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4845851816682274850}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.5890002, y: 2.5640001, z: 0.215}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.4720001, y: 2.522, z: 0.058000002}
+  m_TimeToStationary: 0.5

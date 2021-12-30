@@ -236,11 +236,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 196b993d2b0354842bd6fa90eb970550, type: 3}
+--- !u!1 &5860191770851405188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 130878, guid: 196b993d2b0354842bd6fa90eb970550, type: 3}
+  m_PrefabInstance: {fileID: 5860191770851283642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5860191770851468200 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 454930, guid: 196b993d2b0354842bd6fa90eb970550, type: 3}
   m_PrefabInstance: {fileID: 5860191770851283642}
   m_PrefabAsset: {fileID: 0}
+--- !u!208 &3668439513454913202
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5860191770851405188}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.5830002, y: 2.584, z: 0.272}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.473, y: 2.529, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &6971460351979626223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302,8 +323,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 196b993d2b0354842bd6fa90eb970550, type: 3}
+--- !u!1 &6971460351979610577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 130878, guid: 196b993d2b0354842bd6fa90eb970550, type: 3}
+  m_PrefabInstance: {fileID: 6971460351979626223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6971460351979286525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 454930, guid: 196b993d2b0354842bd6fa90eb970550, type: 3}
   m_PrefabInstance: {fileID: 6971460351979626223}
   m_PrefabAsset: {fileID: 0}
+--- !u!208 &1258842622822712895
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6971460351979610577}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.5830002, y: 2.584, z: 0.272}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.473, y: 2.529, z: 0}
+  m_TimeToStationary: 0.5

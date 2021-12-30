@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7406190755399285645}
   - component: {fileID: 6395567469177793096}
+  - component: {fileID: 8728023066729446426}
   m_Layer: 0
   m_Name: TorchLight
   m_TagString: Untagged
@@ -93,6 +94,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &8728023066729446426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3964630694536626006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7bab04e6304db42a72f7f1912c5119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerIntensity: 1
+  flickerPS: 0.5
+  speedRand: 10
 --- !u!1001 &3126450666131184989
 PrefabInstance:
   m_ObjectHideFlags: 0
