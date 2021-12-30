@@ -9,6 +9,7 @@ public class mazeGeneratorScript : MonoBehaviour
     public colorToObject[] colorToMazeTile;
     public colorToObject[] colorToGameObject;
     public int overallScaleOffset = 1;
+    public float newMaxHP;
 
     [SerializeField] private int spawnArrayIndex; //For testing purposes to display which spawning positions we are using in the MazeObject
 

@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
-    public int maxHP;
-    public int currHP;
-
-    public EnemyHealth(int max)
-    {
-        this.maxHP = max;
+    public float maxHP;
+    public float currHP;
+    void Start(){
+        maxHP = 100 + (GameObject.Find("SceneManager").GetComponent<GameManager>().mazesPassed * 10);
         currHP = maxHP;
     }
 
-    // Update is called once per frame
-    public void TakeDamage(int healthToRemove)
-    {
+    void Update() {
+        if(currHP > maxHP){
+            currHP = maxHP;
+        }
+    }
+
+    public void TakeDamage(float healthToRemove){
         currHP -= healthToRemove;
 
-        if(currHP <= 0)
-        {
+        if(currHP <= 0){
             Destroy(this.gameObject);
         }
     }
