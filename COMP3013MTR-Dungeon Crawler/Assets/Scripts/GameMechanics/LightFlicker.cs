@@ -11,7 +11,7 @@ public class LightFlicker : MonoBehaviour
     private float time;
     private float startIntense;
     private Light light;
-    // Start is called before the first frame update
+ 
     void Start()
     {
         light = GetComponent<Light>();
