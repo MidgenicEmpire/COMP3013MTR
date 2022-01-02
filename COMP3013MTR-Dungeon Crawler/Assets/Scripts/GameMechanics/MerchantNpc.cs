@@ -11,21 +11,31 @@ public class MerchantNpc : MonoBehaviour
     public Image prefabUI;
     private Image uiUse;
     private Transform uiLoc;
-    private Vector3 offset = new Vector3(0, 3.0f, 0); 
+    private Vector3 offset = new Vector3(0, 3.0f, 0);
+    private Animator animator;
+
     // Start is called before the first frame update
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         uiUse = Instantiate(prefabUI, FindObjectOfType<Canvas>().transform).GetComponent<Image>();
         uiLoc = transform.GetChild(0);
 
-       
+      
+
+
     }
 
     // Update is called once per frame
     void Update()
 
     {
+       
   
         uiUse.transform.position = Camera.main.WorldToScreenPoint(uiLoc.position + offset);
 
@@ -36,7 +46,14 @@ public class MerchantNpc : MonoBehaviour
 
         checkDistance();
     }
-
+    private void FixedUpdate()
+    {
+       
+    }
+    private void LateUpdate()
+    {
+        Interacted();
+    }
     private void checkDistance()
     {
         float minDistance = 10;
@@ -51,5 +68,15 @@ public class MerchantNpc : MonoBehaviour
         {
             merchant.SetActive(false);
         }
+    }
+    private void Interacted() 
+    {
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            animator.SetBool("isInteracted", true);
+        }
+        else animator.SetBool("isInteracted", false);
+    
     }
 }
