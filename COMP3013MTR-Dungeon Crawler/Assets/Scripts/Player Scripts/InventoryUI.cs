@@ -60,6 +60,8 @@ public class InventoryUI : MonoBehaviour
         inventoryUI.SetActive(!inventoryUI.activeSelf);
         inventorySpace = true;
         Time.timeScale = 0f;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     void InventoryResume()
@@ -67,5 +69,7 @@ public class InventoryUI : MonoBehaviour
         inventoryUI.SetActive(!inventoryUI.activeSelf);
         Time.timeScale = 1f;
         inventorySpace = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
