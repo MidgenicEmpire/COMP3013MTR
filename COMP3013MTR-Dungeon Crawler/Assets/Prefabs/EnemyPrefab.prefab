@@ -79,6 +79,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1639743923318121420, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -117,7 +121,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8540046446641280246}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 923f3085e4a63784dbc3c4e9ae2dc1ed, type: 3}
   m_Name: 
@@ -145,7 +149,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8540046446641280246}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.008
   m_Speed: 7
