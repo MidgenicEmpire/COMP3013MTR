@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - EndPoint
   - Key
+  - Shop
   layers:
   - Default
   - TransparentFX
