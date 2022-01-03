@@ -75,10 +75,10 @@ public class EnemyAI : MonoBehaviour
         }
         if(playerInRange && !playerInAttackRange)
         {
-            //Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm seeing a thinggsdf");
-            Alert();
-            chasePlayer();
-            enemyAnimator.SetBool("isAttack", false);
+            Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm seeing a thinggsdf");
+        //    Alert();
+        //    chasePlayer();
+        //    enemyAnimator.SetBool("isAttack", false);
         }
         if(playerInRange && playerInAttackRange)
         {
@@ -95,7 +95,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Idle()
     {
-        enemyAnimator.SetBool("isIdle", true);
+        //enemyAnimator.SetBool("isIdle", true);
     }
 
     //-------------------------------------------STRETCH GOAL-----------------------------------//
