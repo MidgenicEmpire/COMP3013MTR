@@ -93,7 +93,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Idle()
     {
-        //enemyAnimator.SetBool("isIdle", true);
+        enemyAnimator.SetBool("isIdle", true);
     }
 
     //-------------------------------------------STRETCH GOAL-----------------------------------//
@@ -146,7 +146,6 @@ public class EnemyAI : MonoBehaviour
         //gets the position of the player and makes it a walk point
         agent.SetDestination(player.position);
 
-        agent.speed = 3.5f;
         enemyAnimator.SetBool("isWalk", true);
 
         //if (distance <= lookRadius)

@@ -176,11 +176,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8540046446641280246}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d1db99578bf93547a0fae5d2d174e86, type: 3}
+  m_Script: {fileID: 11500000, guid: 5961b4b664c0b4c44b2fe3bdd927513c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  player: {fileID: 0}
+  agent: {fileID: 7610646305068251644}
+  player: {fileID: 2671863534783304384, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
   lookRadius: 10
   isGround:
     serializedVersion: 2
@@ -191,8 +191,8 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkRange: 0
   attackRate: 0.1
-  sightRange: 0
-  attackRange: 0
+  sightRange: 10
+  attackRange: 3
   playerInRange: 0
   playerInAttackRange: 0
 --- !u!114 &7603622801646576852
