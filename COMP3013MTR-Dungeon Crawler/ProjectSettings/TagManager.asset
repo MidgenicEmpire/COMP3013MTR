@@ -16,10 +16,10 @@ TagManager:
   - PostProcess
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Enemy
+  - Wall
   - 
   - 
   - 
