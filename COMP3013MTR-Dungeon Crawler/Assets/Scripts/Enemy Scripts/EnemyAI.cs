@@ -39,12 +39,12 @@ public class EnemyAI : MonoBehaviour
     //HitboxScript hitScript;
     //PlayerHealth playerDmg;
 
-    private void Awake()
+   
+    private void Start()
     {
         enemyAnimator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-        //playerDmg = GetComponent<PlayerHealth>();
     }
 
     void getLocation()
@@ -62,23 +62,21 @@ public class EnemyAI : MonoBehaviour
         playerInRange = Physics.CheckSphere(transform.position, sightRange, isPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, isPlayer);
 
-         //chasePlayer();
+         //chasePlayer(); For testing
 
 
         if (!playerInRange && !playerInAttackRange)
         {
 
             Idle();
-            //Patroling could is going to be a stretch goal. 
-            //to make patroling work, we need to figure out how to 
-            //Patroling();
+            
         }
         if(playerInRange && !playerInAttackRange)
         {
-            Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm seeing a thinggsdf");
-        //    Alert();
-        //    chasePlayer();
-        //    enemyAnimator.SetBool("isAttack", false);
+            //Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm seeing a thinggsdf");
+            Alert();
+           chasePlayer();
+            enemyAnimator.SetBool("isAttack", false);
         }
         if(playerInRange && playerInAttackRange)
         {
