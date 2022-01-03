@@ -108,6 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7159082998684102573}
   - component: {fileID: 1224146650298236854}
+  - component: {fileID: 730238773803240584}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -191,6 +192,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &730238773803240584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983165874654721357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8994a80a27aedb54a9e6eaba03a0f227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerIntensity: 1
+  flickerPS: 0.5
+  speedRand: 10
 --- !u!1001 &2526762121338595920
 PrefabInstance:
   m_ObjectHideFlags: 0
