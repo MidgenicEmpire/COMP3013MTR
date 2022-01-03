@@ -6,11 +6,14 @@ TagManager:
   tags:
   - Sword
   - Enemy
+  - EndPoint
+  - Key
+  - Shop
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PostProcess
   - Water
   - UI
   - Ground

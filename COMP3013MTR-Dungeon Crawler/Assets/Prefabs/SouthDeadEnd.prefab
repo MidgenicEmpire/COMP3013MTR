@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8891467896030665073
 Transform:
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 173052, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
       propertyPath: m_Name
       value: SM_Env_Wall_01_Alt (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 173052, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 412966, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
       propertyPath: m_RootOrder
@@ -102,11 +106,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+--- !u!1 &54571169058092625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 173052, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+  m_PrefabInstance: {fileID: 54571169057985965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &54571169057839243 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 412966, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
   m_PrefabInstance: {fileID: 54571169057985965}
   m_PrefabAsset: {fileID: 0}
+--- !u!208 &3785841024572457519
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54571169058092625}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.6350002, y: 2.651, z: 0.209}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.47, y: 2.513, z: 0.060000002}
+  m_TimeToStationary: 0.5
 --- !u!1001 &385975792547726296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -117,6 +142,10 @@ PrefabInstance:
     - target: {fileID: 173052, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
       propertyPath: m_Name
       value: SM_Env_Wall_01_Alt
+      objectReference: {fileID: 0}
+    - target: {fileID: 173052, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 412966, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
       propertyPath: m_RootOrder
@@ -168,11 +197,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+--- !u!1 &385975792547897380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 173052, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+  m_PrefabInstance: {fileID: 385975792547726296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &385975792547614462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 412966, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
   m_PrefabInstance: {fileID: 385975792547726296}
   m_PrefabAsset: {fileID: 0}
+--- !u!208 &7851017535768189725
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385975792547897380}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.6350002, y: 2.651, z: 0.209}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.47, y: 2.513, z: 0.060000002}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1542154324188826226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -183,6 +233,10 @@ PrefabInstance:
     - target: {fileID: 115082, guid: 9f9c8059e0040c544bd1bf5c4f50c6d3, type: 3}
       propertyPath: m_Name
       value: SM_Env_Statue_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 115082, guid: 9f9c8059e0040c544bd1bf5c4f50c6d3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 405812, guid: 9f9c8059e0040c544bd1bf5c4f50c6d3, type: 3}
       propertyPath: m_RootOrder
@@ -258,6 +312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rubble_Pebbles_01
       objectReference: {fileID: 0}
+    - target: {fileID: 168602, guid: 3e0f6b0ee51e6eb42a731a26210989b9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 452598, guid: 3e0f6b0ee51e6eb42a731a26210989b9, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -319,6 +377,10 @@ PrefabInstance:
     - target: {fileID: 109830, guid: b13a24f9d7893c246afe02285ef1f0f9, type: 3}
       propertyPath: m_Name
       value: SM_Env_Pillar_Broken_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 109830, guid: b13a24f9d7893c246afe02285ef1f0f9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 423050, guid: b13a24f9d7893c246afe02285ef1f0f9, type: 3}
       propertyPath: m_RootOrder
@@ -382,6 +444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Pillar_Round_02
       objectReference: {fileID: 0}
+    - target: {fileID: 129630, guid: 276be0eeb7d45eb4eada49334e36062d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 489622, guid: 276be0eeb7d45eb4eada49334e36062d, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -443,6 +509,10 @@ PrefabInstance:
     - target: {fileID: 179920, guid: 646901c7a83b3d74fa146a5470ddb0cb, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rubble_Pebbles_20
+      objectReference: {fileID: 0}
+    - target: {fileID: 179920, guid: 646901c7a83b3d74fa146a5470ddb0cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 462032, guid: 646901c7a83b3d74fa146a5470ddb0cb, type: 3}
       propertyPath: m_RootOrder
@@ -506,6 +576,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Bricks_04
       objectReference: {fileID: 0}
+    - target: {fileID: 144134, guid: 606dc5976508ea346a8b019a9f3be565, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 452692, guid: 606dc5976508ea346a8b019a9f3be565, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -568,6 +642,10 @@ PrefabInstance:
     - target: {fileID: 121644, guid: 67f6358a70929f943ae115f8b4bcf075, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tiles_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 121644, guid: 67f6358a70929f943ae115f8b4bcf075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 419854, guid: 67f6358a70929f943ae115f8b4bcf075, type: 3}
       propertyPath: m_RootOrder
@@ -640,6 +718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wall_01_Alt (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 173052, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 412966, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -690,11 +772,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+--- !u!1 &8769533781506213254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 173052, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+  m_PrefabInstance: {fileID: 8769533781506123386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8769533781505977180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 412966, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
   m_PrefabInstance: {fileID: 8769533781506123386}
   m_PrefabAsset: {fileID: 0}
+--- !u!208 &2197282549077316587
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8769533781506213254}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.6350002, y: 2.651, z: 0.209}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.47, y: 2.513, z: 0.060000002}
+  m_TimeToStationary: 0.5
 --- !u!1001 &9056694808918521569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -705,6 +808,10 @@ PrefabInstance:
     - target: {fileID: 106404, guid: f5bef9e1bbbbe9f4a89a3c958ad516c7, type: 3}
       propertyPath: m_Name
       value: SM_Env_Ceiling_Stone_Flat_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 106404, guid: f5bef9e1bbbbe9f4a89a3c958ad516c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 460624, guid: f5bef9e1bbbbe9f4a89a3c958ad516c7, type: 3}
       propertyPath: m_RootOrder

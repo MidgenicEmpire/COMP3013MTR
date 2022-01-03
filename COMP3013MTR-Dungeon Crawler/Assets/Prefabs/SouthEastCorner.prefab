@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8392733648753851336
 Transform:
@@ -48,6 +48,10 @@ PrefabInstance:
     - target: {fileID: 151846, guid: e80803924d02e1841b21783158018583, type: 3}
       propertyPath: m_Name
       value: SM_Env_Grate_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 151846, guid: e80803924d02e1841b21783158018583, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 465132, guid: e80803924d02e1841b21783158018583, type: 3}
       propertyPath: m_RootOrder
@@ -110,6 +114,10 @@ PrefabInstance:
     - target: {fileID: 158038, guid: b9cff604e7a459c4581b58993fc28f1d, type: 3}
       propertyPath: m_Name
       value: SM_Env_Mushroom_Small_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 158038, guid: b9cff604e7a459c4581b58993fc28f1d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 444028, guid: b9cff604e7a459c4581b58993fc28f1d, type: 3}
       propertyPath: m_RootOrder
@@ -186,6 +194,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tiles_09
       objectReference: {fileID: 0}
+    - target: {fileID: 139024, guid: faefc7bf0b06adc4497fd8b1694fad68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 410826, guid: faefc7bf0b06adc4497fd8b1694fad68, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -256,6 +268,10 @@ PrefabInstance:
     - target: {fileID: 131856, guid: f58bdefe414a9a744ab284e383341fea, type: 3}
       propertyPath: m_Name
       value: SM_Env_Mushroom_Giant_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 131856, guid: f58bdefe414a9a744ab284e383341fea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 414204, guid: f58bdefe414a9a744ab284e383341fea, type: 3}
       propertyPath: m_RootOrder
@@ -332,6 +348,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Trap_Hatch_01
       objectReference: {fileID: 0}
+    - target: {fileID: 167998, guid: 564117a321632024795ebc803943b674, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 475640, guid: 564117a321632024795ebc803943b674, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -395,6 +415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wall_03
       objectReference: {fileID: 0}
+    - target: {fileID: 189982, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 446176, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -445,11 +469,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
+--- !u!1 &6474421673145230506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 189982, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
+  m_PrefabInstance: {fileID: 6474421673145369268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6474421673145486420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446176, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
   m_PrefabInstance: {fileID: 6474421673145369268}
   m_PrefabAsset: {fileID: 0}
+--- !u!208 &3934187935473669883
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6474421673145230506}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.5890002, y: 2.5640001, z: 0.215}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.4720001, y: 2.522, z: 0.058000002}
+  m_TimeToStationary: 0.5
 --- !u!1001 &6585541450390026514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -460,6 +505,10 @@ PrefabInstance:
     - target: {fileID: 130436, guid: 707e7444a2194ab43a2f2d2bb1eae43c, type: 3}
       propertyPath: m_Name
       value: SM_Env_Ceiling_Stone_Flat_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 130436, guid: 707e7444a2194ab43a2f2d2bb1eae43c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 432648, guid: 707e7444a2194ab43a2f2d2bb1eae43c, type: 3}
       propertyPath: m_RootOrder
@@ -531,6 +580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wall_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 189982, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 446176, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -581,8 +634,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
+--- !u!1 &7198012012669481187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 189982, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
+  m_PrefabInstance: {fileID: 7198012012669589245}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7198012012669736989 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446176, guid: a475e72db2f78ba41b557ca01e7ed990, type: 3}
   m_PrefabInstance: {fileID: 7198012012669589245}
   m_PrefabAsset: {fileID: 0}
+--- !u!208 &8085119196742430468
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7198012012669481187}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.5890002, y: 2.5640001, z: 0.215}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.4720001, y: 2.522, z: 0.058000002}
+  m_TimeToStationary: 0.5

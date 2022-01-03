@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7225302316303752684
 Transform:
@@ -46,6 +46,10 @@ PrefabInstance:
     - target: {fileID: 173052, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
       propertyPath: m_Name
       value: SM_Env_Wall_01_Alt
+      objectReference: {fileID: 0}
+    - target: {fileID: 173052, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 412966, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
       propertyPath: m_RootOrder
@@ -97,11 +101,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+--- !u!1 &276052893018873821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 173052, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+  m_PrefabInstance: {fileID: 276052893018717217}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &276052893019091207 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 412966, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
   m_PrefabInstance: {fileID: 276052893018717217}
   m_PrefabAsset: {fileID: 0}
+--- !u!208 &4473521873701326644
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276052893018873821}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.6350002, y: 2.651, z: 0.209}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.47, y: 2.513, z: 0.060000002}
+  m_TimeToStationary: 0.5
 --- !u!1001 &2127927699212108296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112,6 +137,10 @@ PrefabInstance:
     - target: {fileID: 164216, guid: c39c4cd0967de674eb0b5c00da3fdccd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Door_Large_Frame_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 164216, guid: c39c4cd0967de674eb0b5c00da3fdccd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 467916, guid: c39c4cd0967de674eb0b5c00da3fdccd, type: 3}
       propertyPath: m_RootOrder
@@ -187,6 +216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tiles_010
       objectReference: {fileID: 0}
+    - target: {fileID: 123934, guid: c6cb56b5c70f4f14ebf96689fda29f2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 408112, guid: c6cb56b5c70f4f14ebf96689fda29f2c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -258,6 +291,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wall_01_Alt (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 173052, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 412966, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -308,11 +345,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+--- !u!1 &3885487076336165319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 173052, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
+  m_PrefabInstance: {fileID: 3885487076336058939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3885487076336439069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 412966, guid: f18318a9de51f9b4f993559b01c40e15, type: 3}
   m_PrefabInstance: {fileID: 3885487076336058939}
   m_PrefabAsset: {fileID: 0}
+--- !u!208 &7139453121151410054
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3885487076336165319}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.6350002, y: 2.651, z: 0.209}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.47, y: 2.513, z: 0.060000002}
+  m_TimeToStationary: 0.5
 --- !u!1001 &6432670379782527124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -323,6 +381,10 @@ PrefabInstance:
     - target: {fileID: 174938, guid: 620667318a53a7040ad3c980acab36d0, type: 3}
       propertyPath: m_Name
       value: SM_Env_Ceiling_Stone_Flat_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 174938, guid: 620667318a53a7040ad3c980acab36d0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 412494, guid: 620667318a53a7040ad3c980acab36d0, type: 3}
       propertyPath: m_RootOrder
@@ -393,6 +455,10 @@ PrefabInstance:
     - target: {fileID: 163456, guid: 34cd41ec62c0b594b9a6f4e292a1920d, type: 3}
       propertyPath: m_Name
       value: SM_Env_Bone_Spine_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 163456, guid: 34cd41ec62c0b594b9a6f4e292a1920d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 411852, guid: 34cd41ec62c0b594b9a6f4e292a1920d, type: 3}
       propertyPath: m_RootOrder
