@@ -8,8 +8,6 @@ public class ItemObject : ScriptableObject
     public string ItemName = "New Item";
     //add damage if it's loot
 
-    public Sprite icon = null;
-
     public int ItemDamage = 0;
 
     //cost of the item from the shop
