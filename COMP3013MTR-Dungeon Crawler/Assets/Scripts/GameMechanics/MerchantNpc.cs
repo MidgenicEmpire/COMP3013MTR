@@ -95,7 +95,7 @@ public class MerchantNpc : MonoBehaviour
         shopInterface.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        leaving.PlayDelayed(2.0f);
+        leaving.PlayDelayed(1.0f);
     }
     private void Interacted() 
     {
@@ -109,7 +109,7 @@ public class MerchantNpc : MonoBehaviour
 
             shopInterface.SetActive(true);
 
-            greeting.Play();
+            greeting.PlayDelayed(0.5f);
 
             isEPressed = false;
         }
