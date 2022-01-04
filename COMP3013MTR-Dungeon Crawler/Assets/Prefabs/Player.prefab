@@ -1618,6 +1618,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3102766765887951558, guid: 4eb0e0d08ccc73d418074c32212d2e77, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5638109413417916301, guid: 4eb0e0d08ccc73d418074c32212d2e77, type: 3}
       propertyPath: m_Name
       value: InventorySlot
