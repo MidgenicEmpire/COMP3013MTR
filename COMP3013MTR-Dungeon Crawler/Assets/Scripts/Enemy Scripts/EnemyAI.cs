@@ -45,6 +45,8 @@ public class EnemyAI : MonoBehaviour
         enemyAnimator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+
+
     }
 
     void getLocation()
@@ -93,7 +95,8 @@ public class EnemyAI : MonoBehaviour
 
     private void Idle()
     {
-        //enemyAnimator.SetBool("isIdle", true);
+        enemyAnimator.SetBool("isIdle", true);
+        enemyAnimator.SetBool("isWalk", false);
     }
 
     //-------------------------------------------STRETCH GOAL-----------------------------------//
