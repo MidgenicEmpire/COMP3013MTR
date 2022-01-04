@@ -6,6 +6,7 @@ public class ItemObject : ScriptableObject
 {
     //item name
     public string ItemName = "New Item";
+    public Sprite icon = null;
     //add damage if it's loot
 
     public int ItemDamage = 0;
