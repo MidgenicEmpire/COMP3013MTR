@@ -17,7 +17,7 @@ public class attackScript : MonoBehaviour
     void Update()
     {
         if(Input.GetButtonDown("Attack")){
-            StartCoroutine(Attack(1.60f));
+            StartCoroutine(Attack(1f));
         }
     }
 
