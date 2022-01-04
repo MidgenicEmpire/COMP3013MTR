@@ -13,8 +13,8 @@ public class HitboxScript : MonoBehaviour
 
     // Update is called once per frame
     void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "Sword"){
-            Debug.Log("Sword detected!");
+        if(other.gameObject.tag == "Weapon"){
+            Debug.Log("Weapon detected!");
             StartCoroutine(dealDamage(0.30f, this.transform.parent.gameObject));
         }
     }
