@@ -55,14 +55,17 @@ public class movementScript : MonoBehaviour
         moveDir.Normalize();
         moveDir = (forward * speedX) + (right * speedY);
         charController.Move(moveDir * Time.deltaTime);
-        
 
+        bool isP = PauseMenu.isPaused;
         if(canMove)
         {
-            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCam.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+            if (isP == false)
+            {
+                rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+                rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+                playerCam.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+                transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.M))
@@ -81,6 +84,10 @@ public class movementScript : MonoBehaviour
             }
            
         }
+    }
+    private void FixedUpdate()
+    {
+        
     }
 
     void SprintHold()

@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class MerchantNpc : MonoBehaviour
 {
 
-    private GameObject player;
+    public Transform player;
+    
     public GameObject merchant;
     public Image prefabUI;
    // private Image uiUse;
@@ -17,6 +18,8 @@ public class MerchantNpc : MonoBehaviour
     public GameObject shopInterface;
     public AudioSource greeting;
     public AudioSource leaving;
+    public static bool isInShop = false;
+   
     // Start is called before the first frame update
     private void Awake()
     {
@@ -25,17 +28,19 @@ public class MerchantNpc : MonoBehaviour
 
     void Start()
     {
-        
-       // uiUse = Instantiate(prefabUI, FindObjectOfType<Canvas>().transform).GetComponent<Image>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
-       // uiLoc = transform.GetChild(0);
+        // uiUse = Instantiate(prefabUI, FindObjectOfType<Canvas>().transform).GetComponent<Image>();
+
+        // uiLoc = transform.GetChild(0);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 rotationPoint = new Vector3(player.transform.position.x, 0, player.transform.position.z);
+        transform.LookAt(rotationPoint);
         // player = GameObject.FindGameObjectWithTag("Player");
 
         //uiUse.transform.position = Camera.main.WorldToScreenPoint(uiLoc.position + offset);
@@ -92,17 +97,28 @@ public class MerchantNpc : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
+        Time.timeScale = 1.0f;
+
         shopInterface.SetActive(false);
+
         Cursor.visible = false;
+
         Cursor.lockState = CursorLockMode.Locked;
+
         leaving.PlayDelayed(1.0f);
+
+        isInShop = false;
     }
     private void Interacted() 
     {
 
         if (isEPressed == true)
         {
+            isInShop = true;
 
+            Time.timeScale = 0f;
+            
+           
             animator.SetBool("isInteracted", true);
             //open the inventory
             Debug.Log("Inventory Open");
@@ -114,5 +130,7 @@ public class MerchantNpc : MonoBehaviour
             isEPressed = false;
         }
         else animator.SetBool("isInteracted", false);
+
+        isInShop = false;
     }
 }
