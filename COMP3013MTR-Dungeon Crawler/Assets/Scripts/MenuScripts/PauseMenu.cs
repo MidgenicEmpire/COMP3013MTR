@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseUI;
-    public GameObject healthBar;
     public static bool isPaused = false;
     public string MainMenu;
 
@@ -33,7 +32,6 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Game is Resumed");
         pauseUI.SetActive(false);
-        healthBar.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
         //This sets where the cursor interacts
@@ -45,7 +43,6 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Game is Paused");
         pauseUI.SetActive(true);
-        healthBar.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
