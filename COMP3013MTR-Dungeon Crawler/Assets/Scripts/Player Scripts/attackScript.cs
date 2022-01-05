@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class attackScript : MonoBehaviour
 {
-    [SerializeField] private Animator swordAnimController;
-    public GameObject sword;
+    [SerializeField] private Animator weaponAnimController;
+    public GameObject weapon;
 
     void Start() {
-        sword.GetComponent<Collider>().enabled = false;
+        weapon = this.gameObject.transform.Find(GameObject.FindGameObjectWithTag("Weapon").transform.name).gameObject;
+        weaponAnimController = weapon.GetComponent<Animator>();
+        weapon.GetComponentInChildren<Collider>().enabled = false;
     }
 
     // Update is called once per frame
@@ -21,10 +23,10 @@ public class attackScript : MonoBehaviour
 
     IEnumerator Attack(float attackTime)
     {
-        swordAnimController.SetTrigger("isAttacking");
+        weaponAnimController.SetTrigger("isAttacking");
         yield return new WaitForSeconds(attackTime);
-        sword.GetComponent<Collider>().enabled = true;
+        weapon.GetComponent<Collider>().enabled = true;
         yield return new WaitForSeconds(0.15f);
-        sword.GetComponent<Collider>().enabled = false;
+        weapon.GetComponent<Collider>().enabled = false;
     }
 }
