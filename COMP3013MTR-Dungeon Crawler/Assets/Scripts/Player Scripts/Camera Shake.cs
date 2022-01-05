@@ -4,20 +4,8 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    public Transform camTransform;
-    private Vector3 originCamPos;
-
-    [Header("Cam Parameters")]
-    public float shakeDuration;
-    // Start is called before the first frame update
-    void Start()
+    public IEnumerator Shake(float shakeDuration)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, s)
     }
 }
