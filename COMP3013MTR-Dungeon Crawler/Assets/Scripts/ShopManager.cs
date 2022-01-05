@@ -32,6 +32,7 @@ public class ShopManager : MonoBehaviour
     }
     public void ExitShop()
     {
+        Time.timeScale = 1.0f;
         shop.SetActive(false);
         statPage.SetActive(false);
         lootPage.SetActive(false);

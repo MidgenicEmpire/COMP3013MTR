@@ -13,6 +13,8 @@ public class EnemyAI : MonoBehaviour
 
     public LayerMask isGround, isPlayer;
 
+
+
     Animator enemyAnimator;
 
     //Holds the distance between the object and the player
@@ -35,6 +37,7 @@ public class EnemyAI : MonoBehaviour
     public bool playerInRange, playerInAttackRange;
 
 
+
     //instatiates a Hitbox Script
     //HitboxScript hitScript;
     //PlayerHealth playerDmg;
@@ -47,6 +50,7 @@ public class EnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
 
+        
     }
 
     void getLocation()
@@ -58,7 +62,7 @@ public class EnemyAI : MonoBehaviour
     //Updates each frame
     private void Update()
     {
-        
+        Vector3 rotationPoint = new Vector3(player.transform.position.x, 0, player.transform.position.z);
 
         //Checks to see if the player is within sight of the enemy
         playerInRange = Physics.CheckSphere(transform.position, sightRange, isPlayer);
@@ -76,20 +80,20 @@ public class EnemyAI : MonoBehaviour
         if(playerInRange && !playerInAttackRange)
         {
             //Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm seeing a thinggsdf");
-            Alert();
+            Alert(rotationPoint);
            chasePlayer();
             enemyAnimator.SetBool("isAttack", false);
         }
         if(playerInRange && playerInAttackRange)
         {
             //Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm attacking a thinggsdf");
-            attackPlayer();
+            attackPlayer(rotationPoint);
         }
     }
     //Enemy Alert
-    private void Alert()
+    private void Alert(Vector3 rotP)
     {
-        transform.LookAt(player);
+        transform.LookAt(rotP);
         enemyAnimator.SetBool("isAlert", true);
     }
 
@@ -176,12 +180,12 @@ public class EnemyAI : MonoBehaviour
     }
 
 
-    private void attackPlayer()
+    private void attackPlayer(Vector3 rotP)
     {
         //ensures that when the enemy attacks the enemy doesn't move
         agent.SetDestination(transform.position);
 
-        transform.LookAt(player);
+        transform.LookAt(rotP);
 
         //checks to see if the enemy attacked
         if (!hasAttacked)
