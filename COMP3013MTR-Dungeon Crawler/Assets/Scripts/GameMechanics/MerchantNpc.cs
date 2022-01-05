@@ -19,6 +19,7 @@ public class MerchantNpc : MonoBehaviour
     public AudioSource greeting;
     public AudioSource leaving;
     public static bool isInShop = false;
+   
     // Start is called before the first frame update
     private void Awake()
     {
@@ -116,7 +117,8 @@ public class MerchantNpc : MonoBehaviour
             isInShop = true;
 
             Time.timeScale = 0f;
-
+            
+           
             animator.SetBool("isInteracted", true);
             //open the inventory
             Debug.Log("Inventory Open");
