@@ -43,7 +43,6 @@ public class HitboxScript : MonoBehaviour
                 Debug.Log("Player hit");
                 if(!alreadyHit)
                 {
-                    obj.transform.Find(GameObject.FindGameObjectWithTag("MainCamera").transform.name).GetComponent<CameraShake>();
                     obj.GetComponent<PlayerHealth>().TakeDamage(25);
                     alreadyHit = true;
                 }
