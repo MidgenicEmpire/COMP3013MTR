@@ -4,17 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class PlayerHealth
+public class PlayerHealth : MonoBehaviour
 {
     public event EventHandler OnHealthChanged;
-    private int health;
-    private int healthMax;
+    [SerializeField]private int health;
+    [SerializeField]private int healthMax = 100;
     //Health bar
-    public Slider healthSlider;
- public PlayerHealth(int healthMax)
+    public HealthBarController healthBarHandler;
+    void Awake()
     {
-        this.healthMax = healthMax;
         health = healthMax;
+        healthBarHandler.playerHealth = this;
     }
 public int GetHealth()
     {
@@ -30,6 +30,7 @@ public float GetHealthPercent()
     //This ensures that if the player has 0 HP damage will still continue
 public void TakeDamage( int damageAmount)
     {
+        Debug.Log("Player should lose " + damageAmount);
         health -= damageAmount;
         if (health < 0) health = 0;
         if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);

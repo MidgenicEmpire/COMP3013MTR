@@ -31,6 +31,7 @@ public class EnemyAI : MonoBehaviour
     //Enemy Attack
     public float attackRate = 0.1f;
     bool hasAttacked;
+    public GameObject weapon;
 
     //States
     public float sightRange, attackRange;
@@ -48,9 +49,6 @@ public class EnemyAI : MonoBehaviour
         enemyAnimator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-
-
-        
     }
 
     void getLocation()
@@ -194,9 +192,6 @@ public class EnemyAI : MonoBehaviour
             //Test attack code
             enemyAnimator.SetBool("isWalk", false);
             enemyAnimator.SetBool("isAttack", true);
-
-            Debug.Log("You are taking damage");
-            StartCoroutine(player.GetComponent<HitboxScript>().dealDamage(0.30f, player.gameObject));
 
             hasAttacked = true;
             //acts as a deley

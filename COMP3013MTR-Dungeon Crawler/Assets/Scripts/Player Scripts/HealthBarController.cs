@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class HealthBarController : MonoBehaviour
 {
-    private PlayerHealth playerHealth;
+    public PlayerHealth playerHealth;
     GameObject healthBarObject;
-
 
     public void SetUp(PlayerHealth playerHealth)
     {
@@ -16,10 +15,8 @@ public class HealthBarController : MonoBehaviour
     }
 
     //Updates player health only on event trigger
-    private void PlayerHealth_OnHealthChanged(object sendder, System.EventArgs e)
+    private void PlayerHealth_OnHealthChanged(object sender, System.EventArgs e)
     {
         transform.Find("FillContainer").localScale = new Vector3(playerHealth.GetHealthPercent(), 1);
     }
-
-    
 }
