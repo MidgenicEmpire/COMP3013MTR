@@ -195,8 +195,8 @@ public class EnemyAI : MonoBehaviour
             enemyAnimator.SetBool("isWalk", false);
             enemyAnimator.SetBool("isAttack", true);
 
-            //this.gameObject.GetComponent<PlayerHealth>().TakeDamage(25);
             Debug.Log("You are taking damage");
+            StartCoroutine(player.GetComponent<HitboxScript>().dealDamage(0.30f, player.gameObject));
 
             hasAttacked = true;
             //acts as a deley

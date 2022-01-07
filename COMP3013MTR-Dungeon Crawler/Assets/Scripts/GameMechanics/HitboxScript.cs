@@ -19,7 +19,7 @@ public class HitboxScript : MonoBehaviour
         }
     }
 
-    IEnumerator dealDamage(float time, GameObject obj)
+    public IEnumerator dealDamage(float time, GameObject obj)
     {
         while(true)
         {

@@ -163,7 +163,6 @@ MonoBehaviour:
   item: {fileID: 0}
   btnEquip: {fileID: 4293715304506220024}
   outline: {fileID: 3102766765887951558}
-  slot: {fileID: 5638109413417916301}
 --- !u!114 &3102766765887951558
 MonoBehaviour:
   m_ObjectHideFlags: 0

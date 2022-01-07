@@ -9,7 +9,6 @@ public class attackScript : MonoBehaviour
 
     void Start() {
         weapon = this.gameObject.transform.Find(GameObject.FindGameObjectWithTag("Weapon").transform.name).gameObject;
-        weaponAnimController = weapon.GetComponent<Animator>();
         weapon.GetComponentInChildren<Collider>().enabled = false;
     }
 
@@ -17,7 +16,7 @@ public class attackScript : MonoBehaviour
     void Update()
     {
         if(Input.GetButtonDown("Attack")){
-            StartCoroutine(Attack(1.60f));
+            StartCoroutine(Attack(0.48f));
         }
     }
 
@@ -25,8 +24,8 @@ public class attackScript : MonoBehaviour
     {
         weaponAnimController.SetTrigger("isAttacking");
         yield return new WaitForSeconds(attackTime);
-        weapon.GetComponent<Collider>().enabled = true;
-        yield return new WaitForSeconds(0.15f);
-        weapon.GetComponent<Collider>().enabled = false;
+        weapon.GetComponentInChildren<Collider>().enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        weapon.GetComponentInChildren<Collider>().enabled = false;
     }
 }
