@@ -9,7 +9,6 @@ public class InventorySlot : MonoBehaviour
     public PlayerHealth health;
     public Button btnEquip;
     public Outline outline;
-    public GameObject slot;
 
     public void Start()
     {
@@ -18,14 +17,7 @@ public class InventorySlot : MonoBehaviour
             icon.enabled = false;
         }
 
-        if(item == null)
-        {
-            slot.SetActive(false);
-        }
-        else
-        {
-            slot.SetActive(true);
-        }
+
     }
 
     public void AddItem(ItemObject newItem)
