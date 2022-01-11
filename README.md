@@ -1,10 +1,19 @@
-# OnFlux Interactive
+# OnFlux Interactive ⚡
 Team Enterprise Project for Plymouth University **COMP3013**
 
 ## Website
+<br />
 https://onflux007.wixsite.com/onflux-interactive
 
-External Resources:
+##Itch.io page
+<br />
+
+
+##Mazes of Madness
+<br />
+Mazes of Madness is a roughlite, dungeon crawler set in first person perspective
+
+### External Resources:
 <br />
 Navmesh -  https://github.com/Unity-Technologies/NavMeshComponents
 <br />
