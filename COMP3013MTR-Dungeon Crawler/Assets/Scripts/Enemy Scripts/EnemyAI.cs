@@ -13,7 +13,7 @@ public class EnemyAI : MonoBehaviour
 
     public LayerMask isGround, isPlayer;
 
-
+    public int enemyWeaponDamage;
 
     Animator enemyAnimator;
 

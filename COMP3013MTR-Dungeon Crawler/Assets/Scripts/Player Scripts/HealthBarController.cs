@@ -1,17 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthBarController : MonoBehaviour
 {
     public PlayerHealth playerHealth;
     GameObject healthBarObject;
 
-    public void SetUp(PlayerHealth playerHealth)
+    void Start() 
     {
-        this.playerHealth = playerHealth;
+        healthBarObject = this.gameObject;
+    }
 
-        playerHealth.OnHealthChanged += PlayerHealth_OnHealthChanged;
+    public void Update()
+    {
+        healthBarObject.GetComponent<Slider>().value = playerHealth.GetHealthPercent();
+
     }
 
     //Updates player health only on event trigger

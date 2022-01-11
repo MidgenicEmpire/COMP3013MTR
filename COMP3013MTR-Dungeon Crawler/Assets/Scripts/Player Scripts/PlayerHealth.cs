@@ -7,7 +7,7 @@ using System;
 public class PlayerHealth : MonoBehaviour
 {
     public event EventHandler OnHealthChanged;
-    [SerializeField]private int health;
+    [SerializeField]public int health;
     [SerializeField]private int healthMax = 100;
     //Health bar
     public HealthBarController healthBarHandler;
