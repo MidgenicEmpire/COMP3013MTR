@@ -1,6 +1,8 @@
-# COMP3013MTR
-Team Enterprise Project for Plymouth University
+# OnFlux Interactive
+Team Enterprise Project for Plymouth University **COMP3013**
 
+## Website
+https://onflux007.wixsite.com/onflux-interactive
 
 External Resources:
 <br />
