@@ -26,8 +26,9 @@ Environmantal Assets - https://assetstore.unity.com/packages/3d/environments/dun
 
 <br />
 ## Used Software
-1. Unity
-2. Windows Photoshop
-3. Media Bang
-4. GIMP
-5. Jira
+<br />
+1. Unity <br />
+3. Windows Photoshop <br />
+4. Media Bang <br />
+5. GIMP <br />
+6. Jira <br />
