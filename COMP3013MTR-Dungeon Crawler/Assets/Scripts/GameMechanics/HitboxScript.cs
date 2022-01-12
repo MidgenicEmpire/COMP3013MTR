@@ -14,7 +14,7 @@ public class HitboxScript : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Weapon"){
-            StartCoroutine(dealDamagePlayer(0.30f, this.transform.parent.gameObject, other.gameObject.GetComponent<attackScript>().weaponDamage));
+            StartCoroutine(dealDamagePlayer(0.30f, this.transform.parent.gameObject, other.gameObject.GetComponentInParent<attackScript>().weaponDamage));
         }
 
         else if(other.gameObject.tag == "EnemyWeapon"){
