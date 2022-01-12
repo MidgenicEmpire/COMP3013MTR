@@ -18,7 +18,7 @@ public class HitboxScript : MonoBehaviour
         }
 
         else if(other.gameObject.tag == "EnemyWeapon"){
-            StartCoroutine(dealDamageEnemy(1.25f, this.transform.gameObject, other.gameObject.GetComponent<EnemyAI>().enemyWeaponDamage));
+            StartCoroutine(dealDamageEnemy(1.25f, this.transform.gameObject, other.gameObject.GetComponentInParent<EnemyAI>().enemyWeaponDamage));
         }
     }
 
