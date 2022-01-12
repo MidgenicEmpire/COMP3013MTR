@@ -1,27 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public int mazesPassed;
-    public Transform pfHealthBar;
+    public GameObject player;
 
     private void Start()
     {
-        PlayerHealth playerhealth = new PlayerHealth(100);
+        player = GameObject.FindWithTag("Player");
+    }
 
-        //This is to set up the player's health
-        Transform healthBarTransform = Instantiate(pfHealthBar, new Vector3(0, 10), Quaternion.identity);
-        HealthBarController healthBar = healthBarTransform.GetComponent<HealthBarController>();
-
-        healthBar.SetUp(playerhealth);
-
-        Debug.Log("Health: " + playerhealth.GetHealthPercent());
-        playerhealth.TakeDamage(30);
-        Debug.Log("Health: " + playerhealth.GetHealthPercent());
-        playerhealth.Heal(30);
-        Debug.Log("Health: " + playerhealth.GetHealth());
+    void Update() 
+    {
+        if(player.GetComponent<PlayerHealth>().health <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
