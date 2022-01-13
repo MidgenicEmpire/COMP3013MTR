@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class EndP : MonoBehaviour
 {
-
-    public GameObject endKey;
-
     public GameObject endPoint;
-     void Update()
-    {
-    
-        if (endKey.activeSelf)
+
+    void OnTriggerEnter(Collider other) {
+        if(other.gameObject.tag == "Player")
         {
-            endPoint.SetActive(false);
-        }
-        if(endKey.activeSelf == false)
-        {
+            this.gameObject.SetActive(false);
             endPoint.SetActive(true);
         }
     }

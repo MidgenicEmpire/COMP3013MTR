@@ -291,6 +291,12 @@ MonoBehaviour:
     offsetX: 0
     offsetZ: 0
     scaleOffset: 0
+  - color: {r: 1, g: 1, b: 0, a: 1}
+    Object: {fileID: 5011955725965251699, guid: 9c8a84c258a1ac543bbe0ceecc8c6061, type: 3}
+    localScale: {x: 1.3, y: 1.3, z: 1.3}
+    offsetX: 0
+    offsetZ: 0
+    scaleOffset: 0
   overallScaleOffset: 1
   newMaxHP: 0
   spawnArrayIndex: 0
@@ -791,7 +797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazesPassed: 0
-  pfHealthBar: {fileID: 5334774339524646102, guid: 96f138b72b929c74d9cf6ae58e79eecb, type: 3}
+  player: {fileID: 0}
 --- !u!4 &1968336955
 Transform:
   m_ObjectHideFlags: 0
