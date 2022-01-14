@@ -150,6 +150,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
   m_PrefabInstance: {fileID: 8810517716670532007}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &3111893364848358454 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
+  m_PrefabInstance: {fileID: 8810517716670532007}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &360127329124779941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9131702227135254018, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
@@ -276,6 +281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 0
   currHP: 0
+  enemyAnimator: {fileID: 3111893364848358454}
+  enemyNav: {fileID: 7610646305068251644}
 --- !u!195 &7610646305068251644
 NavMeshAgent:
   m_ObjectHideFlags: 0
