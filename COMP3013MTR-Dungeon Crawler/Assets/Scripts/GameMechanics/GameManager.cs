@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject levelGenerator;
     public int mazesPassed;
     public GameObject player;
     public GameObject key;
@@ -32,5 +33,12 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("GameOver");
         }
+    }
+
+    public void NewMaze()
+    {
+        levelGenerator.GetComponent<mazeGeneratorScript>().ClearMaze();
+        levelGenerator.GetComponent<mazeGeneratorScript>().currentMaze = levelGenerator.GetComponent<mazeGeneratorScript>().mazesToGenerate[UnityEngine.Random.Range(0, levelGenerator.GetComponent<mazeGeneratorScript>().mazesToGenerate.Length)];
+        levelGenerator.GetComponent<mazeGeneratorScript>().GenerateMaze();
     }
 }
