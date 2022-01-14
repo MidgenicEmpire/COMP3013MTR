@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568b4168ee3d8b54dba46c3b380eacb2, type: 3}
   m_Name: BreastofTest
   m_EditorClassIdentifier: 
-  ItemName: New Item
-  icon: {fileID: 0}
+  ItemName: Breastplate of Test
+  icon: {fileID: 21300000, guid: d659f7396cd57754eba78763cf986c51, type: 3}
   ItemDamage: 0
-  ItemCost: 0
-  statHealth: 0
-  statDamage: 0
-  statBlock: 0
-  statSpeed: 0
+  ItemCost: 10
+  statHealth: 10
+  statDamage: 10
+  statBlock: 10
+  statSpeed: 10
   isLoot: 0
-  isStat: 0
+  isStat: 1
