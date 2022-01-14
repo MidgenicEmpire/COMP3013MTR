@@ -108,3 +108,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   purse: {fileID: 3891309588736795965, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
+  maxCoin: 5
+  minCoin: 10

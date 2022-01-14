@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MobLoot : MonoBehaviour
 {
 
     public CoinPurse purse;
+    
 
-    private int loot;
+    private int coinDropAmt;
+    public int maxCoin;
+    public int minCoin;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        loot = Random.Range(5, 10);
+        coinDropAmt = Random.Range(minCoin, maxCoin);
     }
 
     // Update is called once per frame
@@ -27,11 +31,9 @@ public class MobLoot : MonoBehaviour
         {
             if (other.TryGetComponent<CoinPurse>(out var gold))
             {
-                gold.mazeGold = gold.mazeGold + loot;
+                gold.mazeGold = gold.mazeGold + coinDropAmt;
             }
             Destroy(gameObject);
-
-            Debug.Log("Reece");
 
         }
     }
