@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.008613807, g: 0.009132282, b: 0.01005789, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -798,6 +798,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazesPassed: 0
   player: {fileID: 0}
+  key: {fileID: 0}
+  MazeExit: {fileID: 0}
 --- !u!4 &1968336955
 Transform:
   m_ObjectHideFlags: 0
