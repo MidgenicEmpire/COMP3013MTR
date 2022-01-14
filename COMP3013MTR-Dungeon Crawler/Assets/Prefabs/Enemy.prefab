@@ -283,6 +283,7 @@ MonoBehaviour:
   currHP: 0
   enemyAnimator: {fileID: 3111893364848358454}
   enemyNav: {fileID: 7610646305068251644}
+  coinDrop: {fileID: 864593498210739506, guid: dadc4d7b8b531ba46b23a798cc0b8806, type: 3}
 --- !u!195 &7610646305068251644
 NavMeshAgent:
   m_ObjectHideFlags: 0

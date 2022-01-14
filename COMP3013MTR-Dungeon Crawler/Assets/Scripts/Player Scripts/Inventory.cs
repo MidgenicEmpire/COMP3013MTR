@@ -24,8 +24,14 @@ public class Inventory : MonoBehaviour
 
     public int space = 30;
 
+   
+
     public List<ItemObject> items = new List<ItemObject>();
 
+    private void Update()
+    {
+      
+    }
     public bool Add(ItemObject item)
     {
         if (items.Count >= space)

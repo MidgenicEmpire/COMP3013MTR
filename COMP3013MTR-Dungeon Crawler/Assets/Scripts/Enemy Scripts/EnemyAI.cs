@@ -17,6 +17,8 @@ public class EnemyAI : MonoBehaviour
 
     Animator enemyAnimator;
 
+   
+
     //Holds the distance between the object and the player
     float distance;
 

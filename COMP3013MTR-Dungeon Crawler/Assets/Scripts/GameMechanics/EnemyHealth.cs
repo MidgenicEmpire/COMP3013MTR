@@ -5,11 +5,16 @@ using UnityEngine.AI;
 public class EnemyHealth : MonoBehaviour
 {
     public float maxHP;
+    public float minHP = 0;
     public float currHP;
     public Animator enemyAnimator;
-    public NavMeshAgent enemyNav;
-    
+    public NavMeshAgent enemyNav; 
+    public GameObject coinDrop;
+
+
     void Start(){
+
+       //goldToDrop = Random.Range(5, 10);
         maxHP = 100 + (GameObject.Find("SceneManager").GetComponent<GameManager>().mazesPassed * 10);
         currHP = maxHP;
     }
@@ -20,18 +25,32 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float healthToRemove){
+    public void TakeDamage(float healthToRemove)
+    {
         currHP -= healthToRemove;
 
-        if(currHP == 0){
+        if (currHP == minHP)
+        {
             enemyNav.isStopped = true;
+            
             enemyAnimator.SetBool("isDead", true);
             enemyAnimator.SetBool("isAlert", false);
             enemyAnimator.SetBool("isWalk", false);
             enemyAnimator.SetBool("isIdle", false);
             enemyAnimator.SetBool("isAttack", false);
-            
+
+           
             Object.Destroy(gameObject, 5f);
+
+            StartCoroutine(PickUp());
         }
+
+        
     }
+    IEnumerator PickUp()
+    {
+        yield return new WaitForSeconds(2.0f);
+        yield return Instantiate(coinDrop, new Vector3(gameObject.transform.position.x , gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.identity);
+    }
+
 }
