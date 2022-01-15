@@ -685,8 +685,8 @@ GameObject:
   - component: {fileID: 7533939189481017675}
   - component: {fileID: 6451457276328256690}
   - component: {fileID: 6200573738240633486}
-  - component: {fileID: 2788707839027648936}
   - component: {fileID: 3891309588736795965}
+  - component: {fileID: 4281599804378915819}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -861,7 +861,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alreadyHit: 0
---- !u!54 &2788707839027648936
+--- !u!114 &3891309588736795965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671863534783304396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b24c255f948a045b8be4ac2402636e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeGold: 0
+  CoinText: {fileID: 5955134367987158701}
+--- !u!54 &4281599804378915819
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -877,20 +891,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &3891309588736795965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2671863534783304396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11b24c255f948a045b8be4ac2402636e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mazeGold: 0
-  CoinText: {fileID: 5955134367987158701}
 --- !u!1 &2904601419906995249
 GameObject:
   m_ObjectHideFlags: 0
