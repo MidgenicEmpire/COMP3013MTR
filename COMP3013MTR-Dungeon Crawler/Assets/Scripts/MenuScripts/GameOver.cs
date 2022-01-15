@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+
+    void Update() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     // Start is called before the first frame update
     public void RestartGame()
     {

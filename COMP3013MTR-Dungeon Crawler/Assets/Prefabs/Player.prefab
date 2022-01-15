@@ -778,7 +778,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.5745726, z: 1}
+  m_Size: {x: 1, y: 1.6, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3132698579865046651
 MonoBehaviour:
@@ -827,7 +827,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1
+  m_Height: 1.7
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -1464,7 +1464,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1619093438194917120}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Resume
+        m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1919,7 +1919,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1619093438194917120}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Resume
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3293,15 +3293,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7917293526805449339, guid: 8be4761867004f948a6156b1253f6136, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.05400002
+      value: -0.058
       objectReference: {fileID: 0}
     - target: {fileID: 7917293526805449339, guid: 8be4761867004f948a6156b1253f6136, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.54399997
+      value: 0.338
       objectReference: {fileID: 0}
     - target: {fileID: 7917293526805449339, guid: 8be4761867004f948a6156b1253f6136, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.625
+      value: 1.072
       objectReference: {fileID: 0}
     - target: {fileID: 7917293526805449339, guid: 8be4761867004f948a6156b1253f6136, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3345,15 +3345,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8417126679562100606, guid: 8be4761867004f948a6156b1253f6136, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.168
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8417126679562100606, guid: 8be4761867004f948a6156b1253f6136, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.93
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8417126679562100606, guid: 8be4761867004f948a6156b1253f6136, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.083
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7262994676186204290, guid: 8be4761867004f948a6156b1253f6136, type: 3}

@@ -33,9 +33,9 @@ public class movementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y >= 0.60f)
+        if(transform.position.y >= 1.0f)
         {
-            Debug.Log("Player should be forced down to 1.0f on y");
+            Debug.Log("Player should be forced down to 0.60f on y");
             transform.position = new Vector3(transform.position.x, 0.60f, transform.position.z);
         }
         walkSpeed = 5f;
