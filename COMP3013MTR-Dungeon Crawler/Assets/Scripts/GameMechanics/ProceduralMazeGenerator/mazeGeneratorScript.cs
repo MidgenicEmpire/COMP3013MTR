@@ -19,12 +19,6 @@ public class mazeGeneratorScript : MonoBehaviour
         GenerateMaze();
     }
 
-    void Update() 
-    {
-        tileParent.transform.position = new Vector3(0, 0, 0);
-        objParent.transform.position = new Vector3(0, 0, 0);
-    }
-
     public void GenerateMaze()
     {
         currentMaze = mazesToGenerate[UnityEngine.Random.Range(0, mazesToGenerate.Length)];
@@ -67,7 +61,7 @@ public class mazeGeneratorScript : MonoBehaviour
                                             colorMapping.Object.transform.position.y,
                                         (overallScaleOffset * (z + colorMapping.offsetZ))*6);
 
-                Instantiate(colorMapping.Object, pos, Quaternion.identity, tileParent.transform);
+                Instantiate(colorMapping.Object, pos, Quaternion.identity, transform);
             }
         }
     }
