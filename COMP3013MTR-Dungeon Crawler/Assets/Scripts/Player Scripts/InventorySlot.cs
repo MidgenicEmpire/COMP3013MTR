@@ -9,7 +9,8 @@ public class InventorySlot : MonoBehaviour
     public PlayerHealth health;
     public Button btnEquip;
     public Outline outline;
-    public GameObject slot;
+    public GameObject player;
+    public int newhealth;
 
     public void Start()
     {
@@ -18,14 +19,12 @@ public class InventorySlot : MonoBehaviour
             icon.enabled = false;
         }
 
-        if(item == null)
-        {
-            slot.SetActive(false);
-        }
-        else
-        {
-            slot.SetActive(true);
-        }
+       
+    }
+
+    public void Update()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void AddItem(ItemObject newItem)
@@ -64,34 +63,19 @@ public class InventorySlot : MonoBehaviour
     public void UnequipItem()
     {
 
-        if (item != null)
-        {
+            outline.enabled = false;
+            player.GetComponent<PlayerHealth>().health -= item.statHealth;
+            player.GetComponent<PlayerHealth>().healthMax -= item.statHealth;
 
 
-                outline.enabled = false;
-            
-        }
-        else
-        {
-            Debug.Log("Slot is Empty");
-        }
     }
     public void EquipItem()
     {
 
+            outline.enabled = true;
+            player.GetComponent<PlayerHealth>().health += item.statHealth;
+            player.GetComponent<PlayerHealth>().healthMax += item.statHealth;
+        
 
-
-        if (item != null)
-        {
-
-
-                outline.enabled = true;
-            }
-
-    
-        else
-        {
-            Debug.Log("Slot is Empty");
-        }
     }
 }
