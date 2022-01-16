@@ -448,8 +448,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   purse: {fileID: 3891309588736795965, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
-  maxCoin: 40
-  minCoin: 30
+  maxCoin: 35
+  minCoin: 25
 --- !u!1001 &8561741102725041271
 PrefabInstance:
   m_ObjectHideFlags: 0

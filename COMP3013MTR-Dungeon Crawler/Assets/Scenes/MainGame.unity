@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.0014565944, g: 0.0017382149, b: 0.0022715665, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -39300,13 +39300,9 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2399111306566715258, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399111306566715258, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BtnClick
+    - target: {fileID: 943085761077053336, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2468544428864348847, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
       propertyPath: m_TagString
@@ -39364,13 +39360,13 @@ PrefabInstance:
       propertyPath: weaponDamage
       value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 3589986521507924036, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4221847999661299804, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
       propertyPath: m_PixelPerfect
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361083700385717570, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7752317868010659142, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
       propertyPath: m_IsActive
