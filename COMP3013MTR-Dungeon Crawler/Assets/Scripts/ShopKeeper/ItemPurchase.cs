@@ -10,9 +10,6 @@ public class ItemPurchase : MonoBehaviour
     private GameObject player;
     private GameObject weapon;
     public int goldToSpend;
-    public int healthStatIncreaseInteger = 10;
-    public int weaponDamageStatIncreaseInteger = 5;
-    public float speedStatIncreaseInteger = 1.0f;
     public AudioSource purchaseComplete;
     public AudioSource noMoney;
    
@@ -37,11 +34,29 @@ public class ItemPurchase : MonoBehaviour
         }
         else
         {
-            Inventory.instance.Add(item);
-            purchaseComplete.Play();
-            goldToSpend-=item.ItemCost;
-            player.GetComponent<CoinPurse>().mazeGold = goldToSpend;
-            GetComponentInParent<MerchantNpc>().coinPurse.text = goldToSpend.ToString();
+            if (item.isLoot == true)
+            {
+                Inventory.instance.Add(item);
+                purchaseComplete.Play();
+                goldToSpend -= item.ItemCost;
+                player.GetComponent<CoinPurse>().mazeGold = goldToSpend;
+                GetComponentInParent<MerchantNpc>().coinPurse.text = goldToSpend.ToString();
+            } else if (item.isStat == true)
+            {
+                statPurchaseHealth();
+                statDamageIncrease();
+                statSpeedIncrease();
+                purchaseComplete.Play();
+                goldToSpend -= item.ItemCost;
+                player.GetComponent<CoinPurse>().mazeGold = goldToSpend;
+                GetComponentInParent<MerchantNpc>().coinPurse.text = goldToSpend.ToString();
+
+            }
+            else
+            {
+                Debug.Log("Couldn't find item stat");
+            }
+
 
         }
     }
@@ -51,22 +66,22 @@ public class ItemPurchase : MonoBehaviour
     }
     public void statPurchaseHealth()
     {
-       
-
-        if(player.TryGetComponent<PlayerHealth>(out var health))
-        {
-            health.healthMax = health.healthMax + healthStatIncreaseInteger;
-            health.health = health.health + healthStatIncreaseInteger;
-        }
+   
+            if (player.TryGetComponent<PlayerHealth>(out var health))
+            {
+                health.healthMax = health.healthMax + item.statHealth;
+                health.health = health.health + item.statHealth;
+                
             
+        }
     }
     public void statDamageIncrease()
     {
-       
+     
 
-        if(weapon.TryGetComponent<attackScript>(out var damage))
+        if (weapon.TryGetComponent<attackScript>(out var damage))
         {
-            damage.weaponDamage = damage.weaponDamage + weaponDamageStatIncreaseInteger;
+            damage.weaponDamage = damage.weaponDamage + item.ItemDamage;
         }
     }
     public void statSpeedIncrease()
@@ -75,11 +90,11 @@ public class ItemPurchase : MonoBehaviour
 
         if(player.TryGetComponent<movementScript>(out var RunSpeed))
         {
-            RunSpeed.runSpeed = RunSpeed.runSpeed + speedStatIncreaseInteger;
+            RunSpeed.runSpeed = RunSpeed.runSpeed + item.statSpeed;
         }
         if (player.TryGetComponent<movementScript>(out var walkSpeed))
         {
-            walkSpeed.walkSpeed = walkSpeed.walkSpeed + speedStatIncreaseInteger;
+            walkSpeed.walkSpeed = walkSpeed.walkSpeed + item.statSpeed;
         }
 
     }
