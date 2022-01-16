@@ -30,7 +30,7 @@ public class EnemyHealth : MonoBehaviour
     {
         currHP -= healthToRemove;
 
-        if (currHP == minHP)
+        if (currHP <= minHP)
         {
             enemyNav.isStopped = true;
             
