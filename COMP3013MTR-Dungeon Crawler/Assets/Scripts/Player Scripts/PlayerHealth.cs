@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public event EventHandler OnHealthChanged;
     [SerializeField]public int health;
-    [SerializeField]private int healthMax = 100;
+     public int healthMax = 100;
     //Health bar
     public HealthBarController healthBarHandler;
     void Awake()

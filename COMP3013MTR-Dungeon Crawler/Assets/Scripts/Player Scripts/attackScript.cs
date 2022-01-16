@@ -6,7 +6,7 @@ public class attackScript : MonoBehaviour
 {
     [SerializeField] private Animator weaponAnimController;
     public GameObject weapon;
-    public int weaponDamage = 25;
+    public int weaponDamage;
 
     void Start() {
         weapon = this.gameObject.transform.Find(GameObject.FindGameObjectWithTag("Weapon").transform.name).gameObject;

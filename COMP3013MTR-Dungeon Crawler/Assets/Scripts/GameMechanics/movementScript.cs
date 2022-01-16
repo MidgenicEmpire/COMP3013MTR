@@ -39,8 +39,8 @@ public class movementScript : MonoBehaviour
         //    Debug.Log("Player should be forced down to 0.60f on y");
         //    transform.position = new Vector3(transform.position.x, 0.60f, transform.position.z);
         //}
-        walkSpeed = 5f;
-        runSpeed = 8f;
+        //walkSpeed = 5f;
+        //runSpeed = 8f;
         
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
