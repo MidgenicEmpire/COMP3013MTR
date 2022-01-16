@@ -9,8 +9,8 @@ public class attackScript : MonoBehaviour
     public int weaponDamage;
 
     void Start() {
-        weapon = this.gameObject.transform.Find(GameObject.FindGameObjectWithTag("Weapon").transform.name).gameObject;
-        weapon.GetComponentInChildren<Collider>().enabled = false;
+        weapon = this.gameObject;
+        weapon.GetComponent<Collider>().enabled = false;
     }
 
     // Update is called once per frame
@@ -25,8 +25,8 @@ public class attackScript : MonoBehaviour
     {
         weaponAnimController.SetTrigger("isAttacking");
         yield return new WaitForSeconds(attackTime);
-        weapon.GetComponentInChildren<Collider>().enabled = true;
+        weapon.GetComponent<Collider>().enabled = true;
         yield return new WaitForSeconds(0.5f);
-        weapon.GetComponentInChildren<Collider>().enabled = false;
+        weapon.GetComponent<Collider>().enabled = false;
     }
 }

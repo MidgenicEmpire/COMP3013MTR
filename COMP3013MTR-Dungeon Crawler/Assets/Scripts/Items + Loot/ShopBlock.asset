@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568b4168ee3d8b54dba46c3b380eacb2, type: 3}
+  m_Name: ShopBlock
+  m_EditorClassIdentifier: 
+  ItemName: ShopBlock
+  icon: {fileID: 21300000, guid: cdfbb6ed8a782dc4fa74b44dc4409230, type: 3}
+  ItemDamage: 0
+  ItemCost: 5
+  statHealth: 0
+  statDamage: 0
+  statBlock: 5
+  statSpeed: 0
+  isLoot: 0
+  isStat: 1

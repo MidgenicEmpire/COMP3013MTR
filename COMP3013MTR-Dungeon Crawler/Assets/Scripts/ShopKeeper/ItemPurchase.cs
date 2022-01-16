@@ -41,6 +41,7 @@ public class ItemPurchase : MonoBehaviour
                 goldToSpend -= item.ItemCost;
                 player.GetComponent<CoinPurse>().mazeGold = goldToSpend;
                 GetComponentInParent<MerchantNpc>().coinPurse.text = goldToSpend.ToString();
+
             } else if (item.isStat == true)
             {
                 statPurchaseHealth();
@@ -81,7 +82,7 @@ public class ItemPurchase : MonoBehaviour
 
         if (weapon.TryGetComponent<attackScript>(out var damage))
         {
-            damage.weaponDamage = damage.weaponDamage + item.ItemDamage;
+            damage.weaponDamage = damage.weaponDamage + item.statDamage;
         }
     }
     public void statSpeedIncrease()
