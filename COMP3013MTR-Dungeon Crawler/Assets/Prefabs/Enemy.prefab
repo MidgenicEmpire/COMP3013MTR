@@ -207,7 +207,7 @@ MonoBehaviour:
   walkRange: 0
   attackRate: 0.1
   weapon: {fileID: 6911510778421503142}
-  sightRange: 50
+  sightRange: 20
   attackRange: 1
   playerInRange: 0
   playerInAttackRange: 0
@@ -252,19 +252,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5934574137787928716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360127329124779941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ff7079e1d4d1b54abbc6a8615efbeb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  alreadyHit: 0
 --- !u!65 &3022379417955665881
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -278,6 +265,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.011209199, y: 0.01935659, z: -0.009}
   m_Center: {x: 0.000084071566, y: 0.007413732, z: 0.002478626}
+--- !u!114 &5934574137787928716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360127329124779941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff7079e1d4d1b54abbc6a8615efbeb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alreadyHit: 0
 --- !u!54 &6360912588983381248
 Rigidbody:
   m_ObjectHideFlags: 0

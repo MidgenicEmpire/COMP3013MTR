@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5073919344067256828}
   - component: {fileID: -2282440376856884634}
-  - component: {fileID: -240451927556292998}
+  - component: {fileID: 7536658166625264431}
   m_Layer: 0
   m_Name: mazeEndpoint
   m_TagString: EndPoint
@@ -46,7 +46,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-240451927556292998
+--- !u!114 &7536658166625264431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,11 +55,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8244817305954946714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2bbf22c32b5bb74bae5c526bd0aaee8, type: 3}
+  m_Script: {fileID: 11500000, guid: de29e06b0427288418d71d01d0df5e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGenerator: {fileID: 0}
-  sceneManager: {fileID: 0}
 --- !u!1001 &5061739144956598053
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -34,11 +34,11 @@ public class movementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y >= 1.0f)
-        {
-            Debug.Log("Player should be forced down to 0.60f on y");
-            transform.position = new Vector3(transform.position.x, 0.60f, transform.position.z);
-        }
+        //if(transform.position.y >= 1.0f)
+        //{
+        //    Debug.Log("Player should be forced down to 0.60f on y");
+        //    transform.position = new Vector3(transform.position.x, 0.60f, transform.position.z);
+        //}
         walkSpeed = 5f;
         runSpeed = 8f;
         
@@ -61,7 +61,7 @@ public class movementScript : MonoBehaviour
         moveDir.Normalize();
         moveDir = (forward * speedX) + (right * speedY);
         charController.Move(moveDir * Time.deltaTime); 
-        transform.position = new Vector3(transform.position.x, 0.80f, transform.position.z);
+        transform.position = new Vector3(transform.position.x, 0.70f, transform.position.z);
 
         bool isP = PauseMenu.isPaused;
         if(canMove)
