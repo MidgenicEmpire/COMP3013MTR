@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class movementScript : MonoBehaviour
 {
+    Vector3 velocity = Vector3.zero;
     public float walkSpeed;
     public float runSpeed;
     CharacterController charController;
@@ -59,7 +60,8 @@ public class movementScript : MonoBehaviour
 
         moveDir.Normalize();
         moveDir = (forward * speedX) + (right * speedY);
-        charController.Move(moveDir * Time.deltaTime);
+        charController.Move(moveDir * Time.deltaTime); 
+        transform.position = new Vector3(transform.position.x, 0.80f, transform.position.z);
 
         bool isP = PauseMenu.isPaused;
         if(canMove)
