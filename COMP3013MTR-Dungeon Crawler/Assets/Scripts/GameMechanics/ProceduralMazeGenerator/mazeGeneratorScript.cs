@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class mazeGeneratorScript : MonoBehaviour
 {
-    public Vector3 startPos;
-    public GameObject player;
-    public GameObject shopKeeper;
-    public GameObject tileParent;
-    public GameObject objParent;
     public MazeScriptableObject[] mazesToGenerate;
     public MazeScriptableObject currentMaze;
     public colorToObject[] colorToMazeTile;
@@ -22,12 +17,6 @@ public class mazeGeneratorScript : MonoBehaviour
     void Start()
     {
         GenerateMaze();
-    }
-
-    void Update() 
-    {
-        tileParent.transform.position = new Vector3(0, 0, 0);
-        objParent.transform.position = new Vector3(0, 0, 0);
     }
 
     public void GenerateMaze()
@@ -72,7 +61,7 @@ public class mazeGeneratorScript : MonoBehaviour
                                             colorMapping.Object.transform.position.y,
                                         (overallScaleOffset * (z + colorMapping.offsetZ))*6);
 
-                Instantiate(colorMapping.Object, pos, Quaternion.identity, tileParent.transform);
+                Instantiate(colorMapping.Object, pos, Quaternion.identity, transform);
             }
         }
     }
@@ -97,61 +86,15 @@ public class mazeGeneratorScript : MonoBehaviour
                                             colorMapping.Object.transform.position.y,
                                         (overallScaleOffset * (z + colorMapping.offsetZ))*6);
 
-                if((colorMapping.Object.name != "Player") && (colorMapping.Object.name != "ShopKeeper"))
-                {
-                    Instantiate(colorMapping.Object, pos, Quaternion.identity, objParent.transform);
-                }
-
-                else if ((colorMapping.Object.name != "Enemy") && (colorMapping.Object.name != "Key") && (colorMapping.Object.name != "mazeEndpoint"))
-                {
-                    
-                    if(colorMapping.Object.name == "Player")
-                    {
-                        player = colorMapping.Object;
-                        startPos = pos;
-                    }
-
-                    else if (colorMapping.Object.name == "ShopKeeper")
-                    {
-                        shopKeeper = colorMapping.Object;
-                    }
-
-                    if((player) && (colorMapping.Object.name == "Player"))
-                    {
-                        player.transform.position = startPos;
-                        player.transform.rotation = Quaternion.identity;
-                    }
-
-                    else if ((colorMapping.Object.name == "Player") && (player == null))
-                    {
-                        Instantiate(colorMapping.Object, pos, Quaternion.identity, transform);
-                    }
-
-                    if((shopKeeper) && (colorMapping.Object.name == "ShopKeeper"))
-                    {
-                        shopKeeper.transform.position = startPos;
-                        shopKeeper.transform.rotation = Quaternion.identity;
-                    }
-
-                    else if ((colorMapping.Object.name == "ShopKeeper") && (shopKeeper == null))
-                    {
-                        Instantiate(colorMapping.Object, pos, Quaternion.identity, transform);
-                    }
-                }
+                Instantiate(colorMapping.Object, pos, Quaternion.identity, transform);
             }
         }
     }
 
     public void ClearMaze()
     {
-        foreach(Transform child in tileParent.transform)
-        {
-            Destroy(child.gameObject);
-        }
-
-        foreach(Transform child in objParent.transform)
-        {
-            Destroy(child.gameObject);
+        foreach (Transform tile in this.transform) {
+            GameObject.Destroy(tile.gameObject);
         }
     }
 }
