@@ -125,18 +125,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7099159219095784486}
         m_TargetAssemblyTypeName: InventorySlot, Assembly-CSharp
-        m_MethodName: EquipItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7099159219095784486}
-        m_TargetAssemblyTypeName: InventorySlot, Assembly-CSharp
         m_MethodName: BtnClick
         m_Mode: 1
         m_Arguments:
@@ -161,8 +149,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 3486543627501550902}
   item: {fileID: 0}
+  health: {fileID: 0}
   btnEquip: {fileID: 4293715304506220024}
   outline: {fileID: 3102766765887951558}
+  player: {fileID: 0}
+  newhealth: 0
 --- !u!114 &3102766765887951558
 MonoBehaviour:
   m_ObjectHideFlags: 0

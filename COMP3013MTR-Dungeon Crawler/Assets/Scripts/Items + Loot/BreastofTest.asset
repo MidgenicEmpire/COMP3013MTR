@@ -20,5 +20,5 @@ MonoBehaviour:
   statDamage: 10
   statBlock: 10
   statSpeed: 10
-  isLoot: 0
-  isStat: 1
+  isLoot: 1
+  isStat: 0
