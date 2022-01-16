@@ -16,7 +16,7 @@ public class EnemyHealth : MonoBehaviour
     void Start(){
 
        //goldToDrop = Random.Range(5, 10);
-        maxHP = 100 + (GameObject.Find("SceneManager").GetComponent<GameManager>().mazesPassed * 10);
+        //maxHP = 100 + (GameObject.Find("SceneManager").GetComponent<GameManager>().mazesPassed * 10);
         currHP = maxHP;
     }
 
