@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 1629692584554032027}
   - component: {fileID: 1623222346554898099}
   m_Layer: 0
-  m_Name: DerangedBoss
+  m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
