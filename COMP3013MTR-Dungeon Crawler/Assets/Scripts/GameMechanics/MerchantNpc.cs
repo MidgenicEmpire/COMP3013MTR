@@ -7,7 +7,7 @@ public class MerchantNpc : MonoBehaviour
 {
 
     public Transform player;
-    
+    public Text coinPurse;
     public GameObject merchant;
     public Image prefabUI;
    // private Image uiUse;
@@ -19,11 +19,13 @@ public class MerchantNpc : MonoBehaviour
     public AudioSource greeting;
     public AudioSource leaving;
     public static bool isInShop = false;
+    public int mazeGoldRelay;
    
     // Start is called before the first frame update
     private void Awake()
     {
         animator = GetComponent<Animator>();
+       
     }
 
     void Start()
@@ -89,15 +91,18 @@ public class MerchantNpc : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isEPressed = false;
-
+  
        // Interacted();
-        Debug.Log("Triggered");
+        //Debug.Log("Triggered");
     }
     private void OnTriggerStay(Collider other)
     {
-       
-       Interacted();
-        Debug.Log("Triggered");
+        if(other.gameObject.tag == "Player")
+        {
+            mazeGoldRelay = other.GetComponent<CoinPurse>().mazeGold;
+        }
+        Interacted(mazeGoldRelay);
+        //Debug.Log("Triggered");
     }
     private void OnTriggerExit(Collider other)
     {
@@ -113,7 +118,7 @@ public class MerchantNpc : MonoBehaviour
 
         isInShop = false;
     }
-    private void Interacted() 
+    private void Interacted(int playerGold) 
     {
 
         if (isEPressed == true)
@@ -121,8 +126,8 @@ public class MerchantNpc : MonoBehaviour
             isInShop = true;
 
             Time.timeScale = 0f;
-            
-           
+            coinPurse.text = playerGold.ToString();
+
             animator.SetBool("isInteracted", true);
             //open the inventory
             Debug.Log("Inventory Open");
