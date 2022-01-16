@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.008613807, g: 0.009132282, b: 0.01005789, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,6 +152,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 922506736}
+  - {fileID: 1286096328}
+  - {fileID: 2068203512}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -167,6 +169,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4447dccf8d3c53048a2a29b16d827ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+  shopKeeper: {fileID: 0}
+  tileParent: {fileID: 1286096327}
+  objParent: {fileID: 2068203511}
   mazesToGenerate:
   - {fileID: 11400000, guid: 5827f60a004c39b4d983bef6b1000135, type: 2}
   - {fileID: 11400000, guid: c91ddcf6879db43478f7009ec9dabee5, type: 2}
@@ -287,6 +294,12 @@ MonoBehaviour:
     scaleOffset: 0
   - color: {r: 0, g: 1, b: 0, a: 1}
     Object: {fileID: 6337512124436195706, guid: 2dd9beea633eda74eaae2d8647860f35, type: 3}
+    localScale: {x: 1.3, y: 1.3, z: 1.3}
+    offsetX: 0
+    offsetZ: 0
+    scaleOffset: 0
+  - color: {r: 1, g: 1, b: 0, a: 1}
+    Object: {fileID: 5011955725965251699, guid: 9c8a84c258a1ac543bbe0ceecc8c6061, type: 3}
     localScale: {x: 1.3, y: 1.3, z: 1.3}
     offsetX: 0
     offsetZ: 0
@@ -635,6 +648,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922506735}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1286096327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1286096328}
+  m_Layer: 0
+  m_Name: tiles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1286096328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286096327}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 328301635}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1448846373
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,8 +833,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0c2db5c8bf02f468551dc0844b5763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelGenerator: {fileID: 328301634}
   mazesPassed: 0
-  pfHealthBar: {fileID: 5334774339524646102, guid: 96f138b72b929c74d9cf6ae58e79eecb, type: 3}
+  player: {fileID: 0}
+  key: {fileID: 0}
+  MazeExit: {fileID: 0}
 --- !u!4 &1968336955
 Transform:
   m_ObjectHideFlags: 0
@@ -805,4 +851,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2068203511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2068203512}
+  m_Layer: 0
+  m_Name: gameObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2068203512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068203511}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 328301635}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

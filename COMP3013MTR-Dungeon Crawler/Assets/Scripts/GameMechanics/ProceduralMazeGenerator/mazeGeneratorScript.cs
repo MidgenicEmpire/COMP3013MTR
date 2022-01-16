@@ -46,7 +46,7 @@ public class mazeGeneratorScript : MonoBehaviour
     {
         Color pixelColor = currentMaze.mazePixelTexture.GetPixel(x, z); //Get color of pixel within texture
 
-        if (pixelColor.a == 0)
+        if (pixelColor.a <= 0)
         {
             return; // Skip pixel if it is transparent
         }
@@ -79,6 +79,7 @@ public class mazeGeneratorScript : MonoBehaviour
         {
             if(colorMapping.color.Equals(pixelColor))
             {
+                
                 colorMapping.Object.transform.localScale = colorMapping.localScale;
 
                 Vector3 pos = new Vector3((overallScaleOffset * (x + colorMapping.offsetX))*6, 

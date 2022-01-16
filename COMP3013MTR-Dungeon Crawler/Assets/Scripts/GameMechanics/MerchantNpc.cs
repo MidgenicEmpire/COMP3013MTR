@@ -59,7 +59,12 @@ public class MerchantNpc : MonoBehaviour
     }
     private void LateUpdate()
     {
-        
+        if(shopInterface.activeInHierarchy == true)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+  
         //  Interacted();
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -84,8 +89,7 @@ public class MerchantNpc : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isEPressed = false;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+
        // Interacted();
         Debug.Log("Triggered");
     }

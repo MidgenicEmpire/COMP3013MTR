@@ -10,6 +10,7 @@ TagManager:
   - Shop
   - Weapon
   - EnemyWeapon
+  - MobLoot
   layers:
   - Default
   - TransparentFX
@@ -19,9 +20,9 @@ TagManager:
   - UI
   - Ground
   - Player
-  - Enemy
-  - Wall
   - 
+  - Wall
+  - Enemy
   - 
   - 
   - 

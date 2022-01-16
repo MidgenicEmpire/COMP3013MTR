@@ -150,6 +150,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
   m_PrefabInstance: {fileID: 8810517716670532007}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &3111893364848358454 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
+  m_PrefabInstance: {fileID: 8810517716670532007}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &360127329124779941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9131702227135254018, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
@@ -170,12 +175,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 1
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!114 &-7577911836308269271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +202,7 @@ MonoBehaviour:
   isPlayer:
     serializedVersion: 2
     m_Bits: 128
+  enemyWeaponDamage: 25
   walkPoint: {x: 0, y: 0, z: 0}
   walkRange: 0
   attackRate: 0.1
@@ -218,7 +224,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 0
+  minHP: 0
   currHP: 0
+  enemyAnimator: {fileID: 3111893364848358454}
+  enemyNav: {fileID: 7610646305068251644}
+  coinDrop: {fileID: 864593498210739506, guid: dadc4d7b8b531ba46b23a798cc0b8806, type: 3}
+  enemyDeathLeft: {fileID: 8795085916032424740, guid: ad4b4f534c157124aac9f8e63ca1a9ca, type: 3}
 --- !u!195 &7610646305068251644
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -241,20 +252,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!64 &2725790670102224122
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360127329124779941}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3366715533221156695, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
 --- !u!114 &5934574137787928716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +265,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alreadyHit: 0
+--- !u!65 &3022379417955665881
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360127329124779941}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.011209199, y: 0.01935659, z: -0.009}
+  m_Center: {x: 0.000084071566, y: 0.007413732, z: 0.002478626}
 --- !u!54 &6360912588983381248
 Rigidbody:
   m_ObjectHideFlags: 0

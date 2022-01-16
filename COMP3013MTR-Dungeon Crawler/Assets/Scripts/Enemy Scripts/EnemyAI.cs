@@ -17,6 +17,8 @@ public class EnemyAI : MonoBehaviour
 
     Animator enemyAnimator;
 
+   
+
     //Holds the distance between the object and the player
     float distance;
 
@@ -71,9 +73,7 @@ public class EnemyAI : MonoBehaviour
 
         if (!playerInRange && !playerInAttackRange)
         {
-
-            Idle();
-            
+            Idle(); 
         }
         if(playerInRange && !playerInAttackRange)
         {
@@ -180,6 +180,7 @@ public class EnemyAI : MonoBehaviour
 
     private void attackPlayer(Vector3 rotP)
     {
+        Debug.Log("is attacking player");
         //ensures that when the enemy attacks the enemy doesn't move
         agent.SetDestination(transform.position);
 
@@ -188,7 +189,6 @@ public class EnemyAI : MonoBehaviour
         //checks to see if the enemy attacked
         if (!hasAttacked)
         {
-
             //Test attack code
             enemyAnimator.SetBool("isWalk", false);
             enemyAnimator.SetBool("isAttack", true);
@@ -200,12 +200,9 @@ public class EnemyAI : MonoBehaviour
 
     }
 
-
-
     private void ResetAttack()
     {
         hasAttacked = false;
         Debug.Log("Resetting attack");
-        
     }
 }
