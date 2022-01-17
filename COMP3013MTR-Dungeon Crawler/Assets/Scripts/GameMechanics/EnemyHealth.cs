@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour
     public NavMeshAgent enemyNav; 
     public GameObject coinDrop;
     public GameObject enemyDeathLeft;
+    int lootLoop = 1;
 
     //Sound
     
@@ -33,9 +34,12 @@ public class EnemyHealth : MonoBehaviour
     {
         currHP -= healthToRemove;
 
+
         if (currHP <= minHP)
         {
             enemyNav.isStopped = true;
+            //sets iI to 1 so the for loop can loop once meaning that if the enemy is attacked while down and his health hits below 0 this code doesn't
+            //run again and cause a second loot pile to spawn
             
             enemyAnimator.SetBool("isDead", true);
             //Enemy death sound
@@ -46,24 +50,31 @@ public class EnemyHealth : MonoBehaviour
             enemyAnimator.SetBool("isAttack", false);
 
            
-            Object.Destroy(gameObject, 4f);
+            Object.Destroy(gameObject, 3f);
 
-            StartCoroutine(PickUp());
-            StartCoroutine(DeadPrefab());
+            for (int i = 0; i < lootLoop; i++)
+            {
+                StartCoroutine(PickUp());
+                StartCoroutine(DeadPrefab());
+
+                lootLoop = 0;
+            }
+         
         }
 
         
     }
+
     IEnumerator PickUp()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1f);
 
         yield return Instantiate(coinDrop, new Vector3(gameObject.transform.position.x , gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.identity);
       
     }
     IEnumerator DeadPrefab()
     {
-        yield return new WaitForSeconds(3.99f);
+        yield return new WaitForSeconds(1f);
         
         yield return Instantiate(enemyDeathLeft, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.identity);
     }
