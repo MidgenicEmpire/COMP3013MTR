@@ -39304,6 +39304,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000302607603746954, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
+      propertyPath: sounds.Array.data[3].Volume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 2468544428864348847, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -39360,6 +39364,14 @@ PrefabInstance:
       propertyPath: weaponDamage
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 2975688746532241156, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
+      propertyPath: m_TagString
+      value: Sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 3136794935465503848, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4221847999661299804, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
       propertyPath: m_PixelPerfect
       value: 1
@@ -39367,6 +39379,10 @@ PrefabInstance:
     - target: {fileID: 5382712788485852478, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6910296412342699504, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
+      propertyPath: playerSound
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7361083700385717570, guid: 9ad3bcc0f10bfba459645b81347083dd, type: 3}
       propertyPath: m_IsActive

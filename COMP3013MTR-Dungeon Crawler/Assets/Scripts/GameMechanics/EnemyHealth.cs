@@ -12,6 +12,9 @@ public class EnemyHealth : MonoBehaviour
     public GameObject coinDrop;
     public GameObject enemyDeathLeft;
 
+    //Sound
+    
+
 
     void Start(){
 
@@ -35,6 +38,8 @@ public class EnemyHealth : MonoBehaviour
             enemyNav.isStopped = true;
             
             enemyAnimator.SetBool("isDead", true);
+            //Enemy death sound
+            gameObject.GetComponent<EnemyAI>().eSound.playSound("eDeath");
             enemyAnimator.SetBool("isAlert", false);
             enemyAnimator.SetBool("isWalk", false);
             enemyAnimator.SetBool("isIdle", false);

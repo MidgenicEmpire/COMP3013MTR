@@ -11,6 +11,8 @@ TagManager:
   - Weapon
   - EnemyWeapon
   - MobLoot
+  - Sound
+  - eSound
   layers:
   - Default
   - TransparentFX

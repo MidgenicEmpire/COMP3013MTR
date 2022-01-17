@@ -17,9 +17,12 @@ public class EnemyAI : MonoBehaviour
 
     Animator enemyAnimator;
 
-    //Sound
+    //Sound Variables
+    public GameObject enemySound;
+    public AudioManager eSound;
 
-
+    //Sound for hitting
+    int enemyHit;
    
 
     //Holds the distance between the object and the player
@@ -49,11 +52,14 @@ public class EnemyAI : MonoBehaviour
     //PlayerHealth playerDmg;
 
    
-    private void Start()
+    void Start()
     {
         enemyAnimator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+
+        enemySound = GameObject.FindGameObjectWithTag("eSound");
+        eSound = enemySound.GetComponent<AudioManager>();
     }
 
     void getLocation()
@@ -79,15 +85,13 @@ public class EnemyAI : MonoBehaviour
             Idle(); 
         }
         if(playerInRange && !playerInAttackRange)
-        {
-            //Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm seeing a thinggsdf");
+        {         
             Alert(rotationPoint);
            chasePlayer();
             enemyAnimator.SetBool("isAttack", false);
         }
         if(playerInRange && playerInAttackRange)
-        {
-            //Debug.Log("Wwaaawwaaa wweeeewaaaa I'mm attacking a thinggsdf");
+        {         
             attackPlayer(rotationPoint);
         }
     }
@@ -104,7 +108,7 @@ public class EnemyAI : MonoBehaviour
         enemyAnimator.SetBool("isWalk", false);
     }
 
-    //-------------------------------------------STRETCH GOAL-----------------------------------//
+    //-----------------------------------STRETCH GOAL-----------------------------------//
     //Enemy patroling script
     //private void Patroling()
     //{
@@ -183,7 +187,6 @@ public class EnemyAI : MonoBehaviour
 
     private void attackPlayer(Vector3 rotP)
     {
-        Debug.Log("is attacking player");
         //ensures that when the enemy attacks the enemy doesn't move
         agent.SetDestination(transform.position);
 
@@ -196,6 +199,8 @@ public class EnemyAI : MonoBehaviour
             enemyAnimator.SetBool("isWalk", false);
             enemyAnimator.SetBool("isAttack", true);
 
+            hitSounds();
+
             hasAttacked = true;
             //acts as a deley
             Invoke(nameof(ResetAttack), attackRate);
@@ -206,6 +211,27 @@ public class EnemyAI : MonoBehaviour
     private void ResetAttack()
     {
         hasAttacked = false;
-        Debug.Log("Resetting attack");
     }
+
+    void hitSounds()
+    {
+        RandomNumber();
+        if (enemyHit == 1)
+        {
+            eSound.playSound("eHit1");
+        }
+        else if (enemyHit == 2)
+        {
+            eSound.playSound("eHit2");
+        }
+        else if (enemyHit == 3)
+        {
+            eSound.playSound("eHit3");
+        }
+    }
+
+    void RandomNumber()
+    {
+        enemyHit = Random.Range(1, 4);
+    } 
 }
