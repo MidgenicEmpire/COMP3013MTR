@@ -99,13 +99,16 @@ public class MerchantNpc : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            other.GetComponentInChildren<attackScript>().enabled = false;
             mazeGoldRelay = other.GetComponent<CoinPurse>().mazeGold;
         }
         Interacted(mazeGoldRelay);
         //Debug.Log("Triggered");
     }
+
     private void OnTriggerExit(Collider other)
     {
+        other.GetComponentInChildren<attackScript>().enabled = true;
         Time.timeScale = 1.0f;
 
         shopInterface.SetActive(false);
