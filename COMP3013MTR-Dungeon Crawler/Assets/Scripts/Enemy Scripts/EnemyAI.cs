@@ -17,6 +17,14 @@ public class EnemyAI : MonoBehaviour
 
     Animator enemyAnimator;
 
+<<<<<<< Updated upstream
+=======
+    //Sound
+
+
+   
+
+>>>>>>> Stashed changes
     //Holds the distance between the object and the player
     float distance;
 

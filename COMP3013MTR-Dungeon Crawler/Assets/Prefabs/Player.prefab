@@ -3118,6 +3118,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+<<<<<<< Updated upstream
+=======
+--- !u!114 &6910296412342699504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628383596721357604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e816128930464e448cdcc9650070de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponAnimController: {fileID: 2385824140468965945}
+  weapon: {fileID: 0}
+  weaponDamage: 25
+  hit1: {fileID: 0}
+  hit2: {fileID: 0}
+  hit3: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1001 &3559496732314154329
 PrefabInstance:
   m_ObjectHideFlags: 0
