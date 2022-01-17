@@ -13,8 +13,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindWithTag("Player");
-        
+        player = GameObject.FindWithTag("Player");       
     }
 
     void Update() 
