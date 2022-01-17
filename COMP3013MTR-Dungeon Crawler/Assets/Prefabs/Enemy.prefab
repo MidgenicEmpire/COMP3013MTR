@@ -1,5 +1,84 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7874294101003413070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4176782804107084643}
+  - component: {fileID: 6196371488071782383}
+  m_Layer: 0
+  m_Name: EnemySounds
+  m_TagString: eSound
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4176782804107084643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7874294101003413070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0002, y: 0.01298, z: 0.0045}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9065612268574846540}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6196371488071782383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7874294101003413070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2fbfa94f89e3e4f8b79f9da6d14cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - Name: eHit1
+    sClip: {fileID: 8300000, guid: fb28a3eff1f548d458b8c0d09de6f3f4, type: 3}
+    Volume: 0.5
+    pitch: 0.9
+    source: {fileID: 0}
+  - Name: eHit2
+    sClip: {fileID: 8300000, guid: 7ea277c0a43d929488f9936648b7f7ee, type: 3}
+    Volume: 0.5
+    pitch: 0.9
+    source: {fileID: 0}
+  - Name: eHit3
+    sClip: {fileID: 8300000, guid: 3fbc470366c5bfb4a8ed00e177ad2b87, type: 3}
+    Volume: 0.5
+    pitch: 0.9
+    source: {fileID: 0}
+  - Name: eHurt1
+    sClip: {fileID: 8300000, guid: 5f04824d2fd44ed4e9aaefe575436d43, type: 3}
+    Volume: 0.5
+    pitch: 0.9
+    source: {fileID: 0}
+  - Name: eHurt2
+    sClip: {fileID: 8300000, guid: c45d8621ae56e434ca3d4b341608c2f2, type: 3}
+    Volume: 0.5
+    pitch: 0.9
+    source: {fileID: 0}
+  - Name: eHurt3
+    sClip: {fileID: 8300000, guid: f6952f97a13cabd4ea5acb495882adbe, type: 3}
+    Volume: 0.5
+    pitch: 0.9
+    source: {fileID: 0}
+  - Name: eDeath
+    sClip: {fileID: 8300000, guid: be731c7ac2aed1e43807a71afd30469f, type: 3}
+    Volume: 0.5
+    pitch: 0.9
+    source: {fileID: 0}
 --- !u!1001 &8810517716670532007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150,6 +229,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
   m_PrefabInstance: {fileID: 8810517716670532007}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &9065612268574846540 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
+  m_PrefabInstance: {fileID: 8810517716670532007}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &3111893364848358454 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 3f5012198919150459a8ea589dbe85b2, type: 3}
@@ -203,9 +287,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   enemyWeaponDamage: 25
+  enemySound: {fileID: 7874294101003413070}
+  eSound: {fileID: 6196371488071782383}
   walkPoint: {x: 0, y: 0, z: 0}
   walkRange: 0
-  attackRate: 0.1
+  attackRate: 0.05
   weapon: {fileID: 6911510778421503142}
   sightRange: 20
   attackRange: 1

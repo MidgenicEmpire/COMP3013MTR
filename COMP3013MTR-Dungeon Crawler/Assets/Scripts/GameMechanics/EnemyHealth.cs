@@ -13,6 +13,9 @@ public class EnemyHealth : MonoBehaviour
     public GameObject enemyDeathLeft;
     int lootLoop = 1;
 
+    //Sound
+    
+
 
     void Start(){
 
@@ -39,6 +42,8 @@ public class EnemyHealth : MonoBehaviour
             //run again and cause a second loot pile to spawn
             
             enemyAnimator.SetBool("isDead", true);
+            //Enemy death sound
+            gameObject.GetComponent<EnemyAI>().eSound.playSound("eDeath");
             enemyAnimator.SetBool("isAlert", false);
             enemyAnimator.SetBool("isWalk", false);
             enemyAnimator.SetBool("isIdle", false);

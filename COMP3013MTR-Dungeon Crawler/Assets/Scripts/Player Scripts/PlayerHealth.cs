@@ -9,8 +9,13 @@ public class PlayerHealth : MonoBehaviour
     public event EventHandler OnHealthChanged;
     [SerializeField]public int health;
      public int healthMax = 100;
+
     //Health bar
     public HealthBarController healthBarHandler;
+
+  
+
+
     void Awake()
     {
         health = healthMax;
@@ -34,6 +39,8 @@ public void TakeDamage( int damageAmount)
         health -= damageAmount;
         if (health < 0) health = 0;
         if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
+
+
     }
 
 public void Heal (int healAmount)
@@ -43,8 +50,5 @@ public void Heal (int healAmount)
         if (OnHealthChanged != null) OnHealthChanged(this, EventArgs.Empty);
     }
 
-
     //This is to test the healthBar
-   
-
 }
