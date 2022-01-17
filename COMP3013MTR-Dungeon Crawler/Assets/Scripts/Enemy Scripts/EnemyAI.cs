@@ -17,6 +17,9 @@ public class EnemyAI : MonoBehaviour
 
     Animator enemyAnimator;
 
+    //Sound
+
+
    
 
     //Holds the distance between the object and the player
