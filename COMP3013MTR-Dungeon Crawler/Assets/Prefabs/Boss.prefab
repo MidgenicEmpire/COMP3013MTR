@@ -170,7 +170,7 @@ MonoBehaviour:
   walkRange: 0
   attackRate: 0.1
   weapon: {fileID: 2374017185095019497}
-  sightRange: 5
+  sightRange: 10
   attackRange: 1
   playerInRange: 0
   playerInAttackRange: 0
@@ -207,7 +207,7 @@ NavMeshAgent:
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 100
-  m_StoppingDistance: 0.75
+  m_StoppingDistance: 1.25
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
