@@ -25,8 +25,8 @@ public class HitboxScript : MonoBehaviour
         pSound = playerSound.GetComponent<AudioManager>();
 
         //Enemy Hurt Sounds
-        enemySound = GameObject.FindGameObjectWithTag("eSound");
-        eSound = enemySound.GetComponent<AudioManager>();
+        //enemySound = GameObject.FindGameObjectWithTag("eSound");
+        //eSound = enemySound.GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -51,20 +51,20 @@ public class HitboxScript : MonoBehaviour
                 alreadyHit = true;
                 Debug.Log(this.gameObject.GetComponentInParent<EnemyHealth>().currHP);
 
-                RandomNumber();
-                if (enemyHurt == 1)
-                {
-                    Debug.Log("Enemy is getting smashed in da face");
-                    eSound.playSound("eHurt1");
-                }
-                else if (enemyHurt == 2)
-                {
-                    eSound.playSound("eHurt2");
-                }
-                else if (enemyHurt == 3)
-                {
-                    eSound.playSound("eHurt3");
-                }
+                //RandomNumber();
+                //if (enemyHurt == 1)
+                //{
+                //    Debug.Log("Enemy is getting smashed in da face");
+                //    eSound.playSound("eHurt1");
+                //}
+                //else if (enemyHurt == 2)
+                //{
+                //    eSound.playSound("eHurt2");
+                //}
+                //else if (enemyHurt == 3)
+                //{
+                //    eSound.playSound("eHurt3");
+                //}
 
 
             }

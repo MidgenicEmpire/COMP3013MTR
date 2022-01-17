@@ -58,8 +58,8 @@ public class EnemyAI : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
 
-        enemySound = GameObject.FindGameObjectWithTag("eSound");
-        eSound = enemySound.GetComponent<AudioManager>();
+        //enemySound = GameObject.FindGameObjectWithTag("eSound");
+        //eSound = enemySound.GetComponent<AudioManager>();
     }
 
     void getLocation()
@@ -199,7 +199,7 @@ public class EnemyAI : MonoBehaviour
             enemyAnimator.SetBool("isWalk", false);
             enemyAnimator.SetBool("isAttack", true);
 
-            hitSounds();
+            //hitSounds();
 
             hasAttacked = true;
             //acts as a deley
